@@ -4,7 +4,7 @@ import fillerImage from "../images/imagefiller.jpg";
 function Footer() {
     return (
       <>
-        <div className="border-t-2 border-blue pt-20">
+        <div className="border-t-2 border-blue pt-20 md:p-10 p-5">
             <div className='w-full lg:flex gap-10'>
                 <div className='text-white lg:w-1/3 h-full'>
                     <h1 className="text-2xl font-bold mb-10">NIBIRU</h1>
