@@ -3,7 +3,7 @@ import fillerImage from "./images/imagefiller.jpg";
 function App() {
   return (
     <>
-      <div className='mt-20'>
+      <div className='p-5 lg:px-32 md:p-10 md:px-20'>
         <div className="lg:flex gap-10">
           <div className='lg:w-1/2 text-white'>
             <h1 className='lg:text-9xl text-8xl font-bold'>NIBIRU</h1>
@@ -37,10 +37,10 @@ function App() {
         <img className='hidden lg:block mt-24 rounded-xl h-[80vh] w-full' src={fillerImage}/>
         <div className="flex flex-col items-center justify-center mt-24 h-[70vh]">
           <h1 className="text-2xl mb-10 text-white">How does Nibiru compare with other space services?</h1>
-          <div className="flex items-center justify-center gap-10 p-10 bg-blue rounded-xl lg:w-3/4 h-96 text-white">
+          <div className="flex items-center justify-center gap-10 p-5 bg-blue rounded-xl lg:w-3/4 h-96 text-white">
             <div className="lg:w-1/4">
               <div>
-                <h1 className="text-7xl font-bold">80%</h1>
+                <h1 className="text-6xl font-bold">80%</h1>
                 <p className="mt-2">higher rates of success</p>
               </div>
               <div>
@@ -50,11 +50,11 @@ function App() {
             </div>
             <div className="lg:w-1/4">
               <div>
-                <h1 className="text-7xl font-bold">80%</h1>
+                <h1 className="text-6xl font-bold">80%</h1>
                 <p className="mt-2">higher rates of success</p>
               </div>
               <div>
-                <h1 className="mt-10 text-7xl font-bold">50%</h1>
+                <h1 className="mt-10 text-6xl font-bold">50%</h1>
                 <p className="mt-2">Cheaper Prices</p>
               </div>
             </div>
