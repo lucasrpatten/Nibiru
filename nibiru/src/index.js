@@ -17,9 +17,7 @@ root.render(
     <BrowserRouter>
       <ScrollToTop>
         <div className='bg-dark-blue'>
-          <div className='sticky top-0'>
-            <Nav />
-          </div>
+          <Nav />
           <Routes>
             <Route path='/' element={<App />} />
             <Route path='/Prices' element={<Prices />}/>
