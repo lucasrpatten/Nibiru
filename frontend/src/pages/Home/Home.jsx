@@ -5,6 +5,7 @@ import WhyNibiru from "./WhyNibiru";
 import Intro from "./Intro";
 import CompanyStats from "./CompanyStats";
 import EnviromentFriendly from "./EnviromentFriendly";
+import EarthView from "../../images/earth_from_window.png"
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
       exit={{ opacity: 0 }}
     >
       <div className="p-5 lg:px-32 md:p-10 md:px-20">
-        <Intro image={fillerImage} />
+        <Intro image={EarthView} />
         <CompanyStats />
         <img
           className="hidden lg:block mt-24 rounded-xl h-[80vh] w-full"

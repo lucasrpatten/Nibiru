@@ -24,7 +24,7 @@ const Intro = (props) => {
           </div>
         </div>
         <div className="lg:w-1/2 mt-16 lg:mt-0">
-          <img className="rounded-xl" src={props.image} />
+          <img alt="View of Earth from a Nibiru Flight" className="rounded-xl lg:max-h-[712px] float-right" src={props.image} />
         </div>
       </div>
   );
