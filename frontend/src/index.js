@@ -5,7 +5,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 import Home from "./pages/Home/Home";
-import Prices from "./pages/Pricing.jsx";
+import Prices from "./pages/Pricing/Pricing.jsx";
 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";

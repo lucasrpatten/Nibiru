@@ -5,7 +5,8 @@ import WhyNibiru from "./WhyNibiru";
 import Intro from "./Intro";
 import CompanyStats from "./CompanyStats";
 import EnviromentFriendly from "./EnviromentFriendly";
-function Home() {
+
+const Home = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
