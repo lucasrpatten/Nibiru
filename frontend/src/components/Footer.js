@@ -52,7 +52,7 @@ function Footer() {
           <div className="mt-20 lg:mt-0 lg:w-1/4 text-white h-full">
             <h1 className="text-2xl mb-10">Sign Up for Email Updates</h1>
             <form className="flex flex-col" action="/action_page.php">
-              <label for="fname">Enter your email</label>
+              <label for="fname">Enter your email:</label>
               <input
                 className="py-4 px-10 w-full md:w-auto mt-10 p-1 font-bold rounded-full"
                 type="text"

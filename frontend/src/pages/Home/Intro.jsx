@@ -14,7 +14,7 @@ const Intro = (props) => {
             nihilo beatior Iuppiter quam Epicurus; Quae contraria sunt his,
             malane?
           </p>
-          <div className="md:flex mt-10 justify-center items-center lg:justify-start lg:items-start">
+          <div className="md:flex mt-10 justify-center gap-10 items-center lg:justify-start lg:items-start">
             <button className="rainbow-button">
               <div className="rainbow-button-inside">Join Today</div>
             </button>

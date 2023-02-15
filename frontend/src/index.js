@@ -10,6 +10,7 @@ import Prices from "./pages/Pricing/Pricing.jsx";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/Scroll";
+import Jump from "./components/Jump";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
@@ -18,6 +19,7 @@ root.render(
       <ScrollToTop>
         <div className="bg-dark-blue">
           <Nav />
+          <Jump />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Prices" element={<Prices />} />
