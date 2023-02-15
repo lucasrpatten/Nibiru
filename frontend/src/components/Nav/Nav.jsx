@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import Hamburger from "./Hamburger";
-import Nibiru from "../images/nibiru.png";
-import fillerImage from "../images/imagefiller.jpg";
+import Hamburger from "../Hamburger";
+import Nibiru from "../../images/nibiru.png";
+import fillerImage from "../../images/imagefiller.jpg";
+import CompanyDropdownItem from "./CompanyDropdownItem";
 
-function Nav() {
+const Nav = () => {
   const [Menu, setMenu] = useState(true);
   const [Dropdown, setDropdown] = useState(false);
   const button =
@@ -78,33 +79,9 @@ function Nav() {
       >
         <div className="h-screen">
           <div className="hidden md:flex h-64 w-full bg-dark-blue md:flex-row flex-col justify-center items-center">
-            <div className="hover:cursor-pointer md:w-1/5 flex flex-col justify-center items-center gap-5">
-              <img
-                className="hidden md:block w-1/2 rounded-full"
-                src={fillerImage}
-              />
-              <h2 className="text-white hover:text-light-gray duration-200 text-xl uppercase">
-                About Us
-              </h2>
-            </div>
-            <div className="hover:cursor-pointer  md:w-1/5 flex flex-col justify-center items-center gap-5">
-              <img
-                className="hidden md:block w-1/2 rounded-full"
-                src={fillerImage}
-              />
-              <h2 className="text-white hover:text-light-gray duration-200 text-xl uppercase">
-                Customer Service
-              </h2>
-            </div>
-            <div className="hover:cursor-pointer md:w-1/5 flex flex-col justify-center items-center gap-5">
-              <img
-                className="hidden md:block w-1/2 rounded-full"
-                src={fillerImage}
-              />
-              <h2 className="text-white hover:text-light-gray duration-200 text-xl uppercase">
-                TSA Documentation
-              </h2>
-            </div>
+            <CompanyDropdownItem name="About Us" image={fillerImage} />
+            <CompanyDropdownItem name="Customer Support" image={fillerImage} to="/CustomerSupport" />
+            <CompanyDropdownItem name="TSA Documentation" image={fillerImage} />
           </div>
           <div
             onClick={() => setDropdown(false)}
