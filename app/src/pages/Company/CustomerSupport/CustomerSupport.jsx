@@ -16,9 +16,9 @@ const CustomerSupport = () => {
             Get Assistance From our Award-Winning Customer Support Team
           </h2>
         </div>
-                  <div className="flex flex-row flex-wrap justify-between items-center w-100vw content-between">
-            <ContactInput />
-          </div>
+        <div className="flex flex-row flex-wrap justify-between items-center w-100vw content-between">
+          <ContactInput />
+        </div>
       </motion.div>
     </>
   );

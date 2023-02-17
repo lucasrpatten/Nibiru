@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './customer_support.css'
+import "./customer_support.css";
 
 const ContactInput = () => {
   const [firstName, setFirstName] = useState("");
@@ -23,7 +23,10 @@ const ContactInput = () => {
 
   return (
     <>
-      <div id="first-name-form" className="w-full lg:w-[48%] flex flex-col mt-5 lg:mt-0">
+      <div
+        id="first-name-form"
+        className="w-full lg:w-[48%] flex flex-col mt-5 lg:mt-0"
+      >
         <label className="text-white" htmlFor="first-name">
           First Name
         </label>
@@ -36,7 +39,10 @@ const ContactInput = () => {
           required
         />
       </div>
-      <div id="last-name-form" className="w-full lg:w-[48%] flex flex-col mt-5 lg:mt-0">
+      <div
+        id="last-name-form"
+        className="w-full lg:w-[48%] flex flex-col mt-5 lg:mt-0"
+      >
         <label className="text-white" htmlFor="last-name">
           Last Name
         </label>
@@ -85,7 +91,9 @@ const ContactInput = () => {
         </select>
       </div>
       <div id="message-form" className="w-full mt-5">
-        <label htmlFor="message" className="text-white">Message</label>
+        <label htmlFor="message" className="text-white">
+          Message
+        </label>
         <textarea
           onChange={(event) => setMessage(event.target.value)}
           value={message}
