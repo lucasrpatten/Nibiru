@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import './customer_support.css'
 
 const ContactInput = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [supportType, setSupportType] = useState("--- Select ---");
 
   const handleSubmit = (event) => {
@@ -16,58 +18,57 @@ const ContactInput = () => {
       alert("Please enter a valid email address.");
       return;
     }
-    // Submit the form data to the server here
-    alert("Form submitted successfully!");
+    window.location.reload();
   };
 
   return (
     <>
-      <div className="w-full lg:w-[48%] flex flex-col">
+      <div id="first-name-form" className="w-full lg:w-[48%] flex flex-col mt-5 lg:mt-0">
         <label className="text-white" htmlFor="first-name">
           First Name
         </label>
         <input
-          className="w-100%"
+          className="name-input"
           name="first-name"
-          placeholder="John"
+          placeholder=" John"
           value={firstName}
           onChange={(event) => setFirstName(event.target.value)}
           required
         />
       </div>
-      <div className="w-full lg:w-[48%] flex flex-col">
+      <div id="last-name-form" className="w-full lg:w-[48%] flex flex-col mt-5 lg:mt-0">
         <label className="text-white" htmlFor="last-name">
           Last Name
         </label>
         <input
-          className="w-100%"
+          className="name-input"
           name="last-name"
-          placeholder="Doe"
+          placeholder=" Doe"
           value={lastName}
           onChange={(event) => setLastName(event.target.value)}
           required
         />
       </div>
-      <div className="w-full flex flex-col">
+      <div id="email-form" className="w-full flex flex-col mt-5">
         <label className="text-white" htmlFor="email">
           Email
         </label>
         <input
-          className="w-100%"
+          className="w-full rounded-xl h-10"
           name="email"
-          placeholder="Email"
+          placeholder=" John@Doe.com"
           value={email}
           type="email"
           onChange={(event) => setEmail(event.target.value)}
           required
         />
       </div>
-      <div className="w-full flex flex-col">
+      <div id="support-type-form" className="w-full flex flex-col mt-5">
         <label className="text-white" htmlFor="supportType">
           Support Type
         </label>
         <select
-          className="w-100%"
+          className="w-full rounded-xl h-10"
           name="supportType"
           id="supportType"
           value={supportType}
@@ -83,7 +84,16 @@ const ContactInput = () => {
           <option>Other</option>
         </select>
       </div>
-      <button type="submit" onClick={handleSubmit}>
+      <div id="message-form" className="w-full mt-5">
+        <label htmlFor="message" className="text-white">Message</label>
+        <textarea
+          onChange={(event) => setMessage(event.target.value)}
+          value={message}
+          className="w-full rounded-md h-32 resize-none"
+          name="message"
+        />
+      </div>
+      <button type="button" onClick={handleSubmit}>
         Submit
       </button>
     </>
