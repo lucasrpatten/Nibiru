@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ContactInput from "./ContactInput";
 
-const CustomerSupport = () => {
+const ContactUs = () => {
   return (
     <>
       <motion.div
@@ -24,4 +24,4 @@ const CustomerSupport = () => {
   );
 };
 
-export default CustomerSupport;
+export default ContactUs;

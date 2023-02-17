@@ -1,17 +1,16 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
+import Jump from "./components/Jump";
+import Nav from "./components/Nav/Nav";
+import ScrollToTop from "./components/Scroll";
 import "./index.css";
-import reportWebVitals from "./reportWebVitals";
-
+import ContactUs from "./pages/Company/ContactUs/ContactUs";
 import Home from "./pages/Home/Home";
 import Prices from "./pages/Pricing/Pricing.jsx";
-
-import Nav from "./components/Nav/Nav";
-import Footer from "./components/Footer";
-import ScrollToTop from "./components/Scroll";
-import Jump from "./components/Jump";
-import CustomerSupport from "./pages/Company/CustomerSupport/CustomerSupport";
+import Help from "./pages/Help/Help";
+import reportWebVitals from "./reportWebVitals";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
@@ -24,7 +23,8 @@ root.render(
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Prices" element={<Prices />} />
-            <Route path="/CustomerSupport" element={<CustomerSupport />} />
+            <Route path="/ContactUs" element={<ContactUs />} />
+            <Route path="/Help" element={<Help />} />
           </Routes>
           <Footer />
         </div>

@@ -60,7 +60,7 @@ const Nav = () => {
             </p>
           </div>
           <button className={button}>
-            <Link to="/CustomerSupport">
+            <Link to="/ContactUs">
               <div className={buttonInside}>Contact Us</div>
             </Link>
           </button>
@@ -79,14 +79,11 @@ const Nav = () => {
         transition={{ duration: 0.5 }}
         className="overflow-hidden"
       >
-        <div className="h-screen">
+        <div id="dropdown" className="h-screen">
           <div className="hidden md:flex h-64 w-full bg-dark-blue md:flex-row flex-col justify-center items-center">
-            <CompanyDropdownItem name="About Us" image={fillerImage} />
-            <CompanyDropdownItem
-              name="Customer Support"
-              image={fillerImage}
-            />
-            <CompanyDropdownItem name="TSA Documentation" image={fillerImage} />
+            <CompanyDropdownItem name="About Us" />
+            <CompanyDropdownItem name="Customer Support" to="/ContactUs" />
+            <CompanyDropdownItem name="TSA Documentation" />
           </div>
           <div
             onClick={() => setDropdown(false)}
@@ -94,6 +91,7 @@ const Nav = () => {
           ></div>
         </div>
       </motion.div>
+
       <AnimatePresence>
         {!Menu ? (
           <motion.div

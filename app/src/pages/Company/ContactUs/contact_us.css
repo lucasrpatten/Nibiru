@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .name-input {
+    @apply  w-full h-[56px] p-3 bg-white hover:bg-light-gray rounded-sm;
+  }
+  .label {
+    @apply absolute text-sm text-white duration-300 transform -translate-y-3 top-1 z-10 origin-[0] bg-gray px-2 peer-focus:px-2 peer-focus:text-teal peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:-translate-y-3 left-1;
+  }
+}
