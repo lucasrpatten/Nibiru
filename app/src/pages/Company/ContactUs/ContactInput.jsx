@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./customer_support.css";
+import "./contact_us.css";
 
 const ContactInput = () => {
   const [firstName, setFirstName] = useState("");
@@ -21,82 +21,64 @@ const ContactInput = () => {
     window.location.reload();
   };
 
-  const [isActive, setIsActive] = useState(false);
-  const [isActive2, setIsActive2] = useState(false);
-
-  function handleTextChange(text) {
-    if (text !== '') {
-      setIsActive(true);
-    } else {
-      setIsActive(false);
-    }
-  }
-
-    function secondHandleTextChange(text) {
-      if (text !== '') {
-        setIsActive2(true);
-      } else {
-        setIsActive2(false);
-      }
-    }
-
+  const input = "block rounded-xl px-2.5 pb-1.5 pt-4 w-full text-sm text-white bg-gray border-2 border-white focus:outline-none focus:ring-0 focus:border-teal peer"
+  const nameDiv = "relative w-full lg:w-1/2 flex flex-col mt-5 lg:mt-0"
   return (
     <>
       <div className="bg-gray w-full p-10 rounded-xl">
-        <div className="flex gap-5">
-          <div
-            id="first-name-form"
-            className="w-full lg:w-1/2 flex flex-col mt-5 lg:mt-0"
-          >
-            <label className={ isActive ? "Active" : "text-text absolute translate-x-3.5 translate-y-3.5 origin-top-left duration-200 uppercase font-bold tracking-wider"} htmlFor="first-name"
-              First Name
-            />
-            <input
-              className="name-input"
-              name="first-name"
-              placeholder=" John"
-              value={firstName}
-              onChange={(event) => setFirstName(event.target.value)}
-              required
-            />
-          </div>
+        <div className="md:flex gap-5">
+        <div 
+        id="first-name-form"
+        class={nameDiv}
+        >
+          <input 
+          type="text" 
+          className={input} 
+          name="first-name"
+          value={firstName}
+          onChange={(event) => setFirstName(event.target.value)}
+          placeholder=" " 
+          required
+          />
+          <label class="label" htmlFor="first-name">First Name</label>
+        </div>
           <div
             id="last-name-form"
-            className="w-full lg:w-1/2 flex flex-col mt-5 lg:mt-0"
+            class={nameDiv}
           >
-            <label className="text-white" htmlFor="last-name">
-              Last Name
-            </label>
             <input
-              className="name-input"
+              className={input} 
               name="last-name"
-              placeholder=" Doe"
+              placeholder= " "
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
               required
             />
+            <label class="label" htmlFor="last-name">
+              Last Name
+            </label>
           </div>
         </div>
-        <div id="email-form" className="w-full flex flex-col mt-5">
-          <label className="text-white" htmlFor="email">
-            Email
-          </label>
+        <div id="email-form" className="relative w-full flex flex-col mt-5">
           <input
-            className="w-full rounded-xl h-10"
+            className={input}
             name="email"
-            placeholder=" John@Doe.com"
+            placeholder=" "
             value={email}
             type="email"
             onChange={(event) => setEmail(event.target.value)}
             required
           />
+          <label class="label" htmlFor="email">
+            Email
+          </label>
         </div>
         <div id="support-type-form" className="w-full flex flex-col mt-5">
-          <label className="text-white" htmlFor="supportType">
+          <label className="text-white mb-2" htmlFor="supportType">
             Support Type
           </label>
           <select
-            className="w-full rounded-xl h-10"
+            className="w-full rounded-xl h-10 bg-gray text-white border-2 border-white"
             name="supportType"
             id="supportType"
             value={supportType}
@@ -119,11 +101,11 @@ const ContactInput = () => {
           <textarea
             onChange={(event) => setMessage(event.target.value)}
             value={message}
-            className="w-full rounded-md h-32 resize-none bg-gray border-2 border-white"
+            className="w-full rounded-md h-32 resize-none"
             name="message"
           />
         </div>
-        <button className="rainbow-button" type="button" onClick={handleSubmit}>
+        <button type="button" onClick={handleSubmit}>
           Submit
         </button>
       </div>

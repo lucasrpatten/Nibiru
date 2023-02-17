@@ -4,7 +4,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 import fillerImage from "../images/imagefiller.jpg";
 
-function Footer() {
+const Footer = () => {
   const button =
     "w-full md:w-auto mt-10 md:m-10 p-1 font-bold rounded-full bg-gradient-to-r from-teal via-blue to-purple";
   const buttonInside =
@@ -89,10 +89,13 @@ function Footer() {
                   <Link to="/">About Us</Link>
                 </li>
                 <li className="hover:text-teal duration-200">
-                  <Link to="/">Customer Support </Link>
+                  <Link to="/ContactUs">Contact Us</Link>
                 </li>
                 <li className="hover:text-teal duration-200">
-                  <Link to="/">TSA Documentation </Link>
+                  <Link to="/Help">Help/FAQ</Link>
+                </li>
+                <li className="hover:text-teal duration-200">
+                  <Link to="/">TSA Documentation</Link>
                 </li>
               </ul>
             </div>
