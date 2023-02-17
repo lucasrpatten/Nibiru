@@ -1,13 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faChevronDown, faX } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
-import Hamburger from "../Hamburger";
-import Nibiru from "../../images/nibiru.png";
 import fillerImage from "../../images/imagefiller.jpg";
+import Nibiru from "../../images/nibiru.png";
+import MobileNav from "../MobileNav";
 import CompanyDropdownItem from "./CompanyDropdownItem";
 
 const Nav = () => {
@@ -60,7 +60,9 @@ const Nav = () => {
             </p>
           </div>
           <button className={button}>
-            <div className={buttonInside}>Sign In</div>
+            <Link to="/CustomerSupport">
+              <div className={buttonInside}>Contact Us</div>
+            </Link>
           </button>
         </div>
         <div className="w-full flex items-center justify-end lg:hidden p-5">
@@ -83,7 +85,6 @@ const Nav = () => {
             <CompanyDropdownItem
               name="Customer Support"
               image={fillerImage}
-              to="/CustomerSupport"
             />
             <CompanyDropdownItem name="TSA Documentation" image={fillerImage} />
           </div>
@@ -111,7 +112,7 @@ const Nav = () => {
                     icon={faX}
                   />
                 </div>
-                <Hamburger />
+                <MobileNav />
               </div>
               <div
                 onClick={() => setMenu(true)}
