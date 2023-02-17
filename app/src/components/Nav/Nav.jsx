@@ -1,13 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faChevronDown, faX } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
-import Hamburger from "../Hamburger";
-import Nibiru from "../../images/nibiru.png";
 import fillerImage from "../../images/imagefiller.jpg";
+import Nibiru from "../../images/nibiru.png";
+import MobileNav from "../MobileNav";
 import CompanyDropdownItem from "./CompanyDropdownItem";
 
 const Nav = () => {
@@ -60,7 +60,7 @@ const Nav = () => {
             </p>
           </div>
           <button className={button}>
-            <Link to="/CustomerSupport">
+            <Link to="/ContactUs">
               <div className={buttonInside}>Contact Us</div>
             </Link>
           </button>
@@ -95,6 +95,7 @@ const Nav = () => {
           ></div>
         </div>
       </motion.div>
+
       <AnimatePresence>
         {!Menu ? (
           <motion.div
@@ -113,7 +114,7 @@ const Nav = () => {
                     icon={faX}
                   />
                 </div>
-                <Hamburger />
+                <MobileNav />
               </div>
               <div
                 onClick={() => setMenu(true)}
