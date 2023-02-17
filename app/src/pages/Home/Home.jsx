@@ -1,17 +1,17 @@
+import { AnimatePresence, motion } from "framer-motion";
 import fillerImage from "../../images/imagefiller.jpg";
-import Comparable from "./Comparable";
-import { motion, AnimatePresence } from "framer-motion";
-import WhyNibiru from "./WhyNibiru";
-import Intro from "./Intro";
 import CompanyStats from "./CompanyStats";
-import EnvironmentFriendly from "./EnvironmentFriendly";
-import TreeLogo from "./tree_logo.png";
-import LeafLogo from "./leaf_logo.png";
-import EarthLeafLogo from "./earth_leaf_logo.png";
+import Comparable from "./Comparable";
+import EarthLeafLogo from "./EnviromentLogos/earth_leaf_logo.png";
+import LeafLogo from "./EnviromentLogos/leaf_logo.png";
+import PlantRocketLogo from "./EnviromentLogos/plant_rocket_logo.png";
+import RecyclingLogo from "./EnviromentLogos/recycling_logo.png";
+import RhinoLogo from "./EnviromentLogos/rhino_logo.png";
+import TreeLogo from "./EnviromentLogos/tree_logo.png";
+import EnvironmentFriendly from "./EnvironmentFriendly.tsx";
+import Intro from "./Intro";
+import WhyNibiru from "./WhyNibiru";
 import EarthView from "./earth_from_window.png";
-import RhinoLogo from "./rhino_logo.png";
-import PlantRocketLogo from "./plant_rocket_logo.png";
-import RecyclingLogo from "./recycling_logo.png";
 
 const Home = () => {
   return (

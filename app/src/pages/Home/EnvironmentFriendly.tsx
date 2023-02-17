@@ -1,6 +1,21 @@
 import React from "react";
 
-const EnvironmentFriendly = (props) => {
+interface Properties {
+  image1: string
+  alt1: string
+  image2: string
+  alt2: string
+  image3: string
+  alt3: string
+  image4: string
+  alt4: string
+  image5: string
+  alt5: string
+  image6: string
+  alt6: string
+}
+
+const EnvironmentFriendly: React.FC<Properties> = (props: Properties) => {
   return (
     <div className="hidden lg:h-[80vh] lg:flex flex-col items-center justify-center text-white">
       <h2 className="text-2xl mb-10">
