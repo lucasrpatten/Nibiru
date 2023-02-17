@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .name-input {
+    @apply w-full rounded-xl h-10
+  }
+}
