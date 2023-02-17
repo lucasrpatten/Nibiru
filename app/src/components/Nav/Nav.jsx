@@ -80,7 +80,11 @@ const Nav = () => {
         <div className="h-screen">
           <div className="hidden md:flex h-64 w-full bg-dark-blue md:flex-row flex-col justify-center items-center">
             <CompanyDropdownItem name="About Us" image={fillerImage} />
-            <CompanyDropdownItem name="Customer Support" image={fillerImage} to="/CustomerSupport" />
+            <CompanyDropdownItem
+              name="Customer Support"
+              image={fillerImage}
+              to="/CustomerSupport"
+            />
             <CompanyDropdownItem name="TSA Documentation" image={fillerImage} />
           </div>
           <div
@@ -119,6 +123,6 @@ const Nav = () => {
       </AnimatePresence>
     </div>
   );
-}
+};
 
 export default Nav;
