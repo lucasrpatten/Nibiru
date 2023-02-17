@@ -60,7 +60,9 @@ const Nav = () => {
             </p>
           </div>
           <button className={button}>
-            <div className={buttonInside}>Sign In</div>
+            <Link to="/CustomerSupport">
+              <div className={buttonInside}>Contact Us</div>
+            </Link>
           </button>
         </div>
         <div className="w-full flex items-center justify-end lg:hidden p-5">
@@ -78,12 +80,12 @@ const Nav = () => {
         className="overflow-hidden"
       >
         <div className="h-screen">
-          <div className="hidden md:flex h-64 w-full bg-dark-blue md:flex-row flex-col justify-center items-center">
+          <div className="hidden lg:flex h-64 w-full bg-dark-blue lg:flex-row flex-col justify-center items-center">
             <CompanyDropdownItem name="About Us" image={fillerImage} />
             <CompanyDropdownItem
-              name="Customer Support"
+              name="Help Center"
               image={fillerImage}
-              to="/CustomerSupport"
+              to=""
             />
             <CompanyDropdownItem name="TSA Documentation" image={fillerImage} />
           </div>
@@ -103,7 +105,7 @@ const Nav = () => {
             transition={{ stiffness: "100", duration: "0.55" }}
           >
             <div className="flex">
-              <div className="h-screen w-3/4 bg-dark-blue md:hidden">
+              <div className="h-screen w-3/4 bg-dark-blue lg:hidden">
                 <div className="flex justify-end items-center text-white p-5">
                   <FontAwesomeIcon
                     onClick={() => setMenu(true)}
