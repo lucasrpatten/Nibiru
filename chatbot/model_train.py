@@ -85,7 +85,7 @@ model = tf.keras.Sequential([
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Train the model
-model.fit(X, y, epochs=200, batch_size=7, verbose=1)
+model.fit(X, y, epochs=100, batch_size=8, verbose=1)
 
 # Save the model
 tfjs.converters.save_keras_model(model, 'chatbot_model_js')
