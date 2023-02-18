@@ -1,65 +1,72 @@
 import json
+import random
+
 import nltk
 import numpy as np
 import tensorflow as tf
-from nltk.stem import WordNetLemmatizer, PorterStemmer
+import tensorflowjs as tfjs
+from nltk.stem import WordNetLemmatizer
 from tensorflow import keras
 
-# Download necessary nltk data
+# Download required NLTK data
 nltk.download('punkt')
 nltk.download('wordnet')
 
-# Load the trained model
-model = keras.models.load_model('chatbot_model.h5')
-
-# Load the vocabulary and tags
-with open('vocab.json') as file:
-    vocab = json.load(file)
-
+# Load the model, tags, and vocab
+model = tfjs.converters.load_keras_model('./chatbot_model_js/model.json')
 with open('tags.json') as file:
     tags = json.load(file)
+with open('vocab.json') as file:
+    vocab = json.load(file)
+with open('responsedata.json') as file:
+    data = json.load(file)
 
-# Create lemmatizer and stemmer objects
+# Create lemmatizer, stemmer, and tokenizer
 lemmatizer = WordNetLemmatizer()
-stemmer = PorterStemmer()
+stemmer = nltk.PorterStemmer()
+tokenizer = nltk.WordPunctTokenizer()
 
-# Define a function to process user input
+# Create function to process user input
 def process_input(input_text):
-    # Tokenize the input text
-    tokens = nltk.word_tokenize(input_text)
-    # Stem and lemmatize each token
-    processed_tokens = []
-    for token in tokens:
-        processed_token = stemmer.stem(lemmatizer.lemmatize(token.lower()))
-        processed_tokens.append(processed_token)
-    # Create a bag of words from the processed tokens
-    bag_of_words = [int(token in processed_tokens) for token in vocab]
-    return np.array(bag_of_words).reshape(1, -1)
+    # Tokenize and lemmatize the input
+    tokens = tokenizer.tokenize(input_text)
+    tokens = [lemmatizer.lemmatize(token.lower()) for token in tokens]
+    tokens = [stemmer.stem(token) for token in tokens]
 
-# Define a function to generate a response
+    # Create input vector from processed input
+    input_vector = [int(word in tokens) for word in vocab]
+
+    return input_vector
+
+# Define function to generate chatbot response
 def generate_response(input_text):
-    # Process the user input
-    processed_input = process_input(input_text)
-    # Make a prediction using the trained model
-    prediction = model.predict(processed_input)
-    # Find the tag with the highest probability
-    max_prob_index = np.argmax(prediction)
-    tag = tags[max_prob_index]
-    # If the probability is below a certain threshold, return a default response
-    if prediction[0][max_prob_index] < 0.5:
-        return "I'm sorry, I didn't understand. Can you please rephrase your question?"
-    # Select a random response from the intent with the highest probability
+    # Process the input
+    input_vector = process_input(input_text)
+
+    # Get predicted probabilities for each tag
+    results = model.predict(np.array([input_vector]))
+    results = np.squeeze(results)
+
+    # Choose the tag with the highest probability
+    tag_index = np.argmax(results)
+    tag = tags[tag_index]
+
+    # Choose a random response from the tag's list of responses
+    responses = []
     for intent in data['intents']:
         if intent['tag'] == tag:
-            response = random.choice(intent['responses'])
-            break
+            responses = intent['responses']
+    response = random.choice(responses)
+
     return response
 
-# Allow the user to interact with the chatbot
-print("Welcome to the chatbot! Type 'quit' to exit.")
+# Run the chatbot
 while True:
+    # Get user input
     input_text = input("You: ")
-    if input_text.lower() == 'quit':
-        break
+
+    # Generate chatbot response
     response = generate_response(input_text)
-    print("Bot:", response)
+
+    # Print response
+    print("Bot: " + response)
