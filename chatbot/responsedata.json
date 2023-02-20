@@ -2,124 +2,91 @@
   "intents": [
     {
       "tag": "default",
-      "responses": [
-        "Sorry, I don't understand. Please try rephrasing your question, or contacting our customer support."
-      ]
+
     },
     {
       "tag": "greeting",
-      "responses": [
-        "Hello! How can I assist you?",
-        "Hi there! How can I help you?",
-        "Welcome! How may I assist you?",
-        "Howdy partner! How can I help?"
-      ]
+
     },
     {
       "tag": "safety",
-      "responses": [
-        "Our rockets were designed by professionals with safety in mind and no one has been seriously injured on any of our over 10,000 rocket flights. For more information about safety, visit our Safety page.",
-        "Our flights are very safe. You are nearly 100 times more likely to die in an hour of driving than in an hour on one of our flights. For more information about safety, visit our Safety page.",
-        "We take safety very seriously and ensure all our staff are rigorously trained to maintain our excellent safety record. To learn more, visit our Safety page.",
-        "Our safety procedures are constantly reviewed and updated to ensure the safest and most reliable flights possible. To learn more, visit our Safety page."
-      ]
+
     },
     {
       "tag": "hate",
-      "responses": [
-        "I apologize if I did something wrong. To submit a complaint, please contact us."
-      ]
+
     },
     {
       "tag": "thanks",
-      "responses": [
-        "You're welcome! Thanks for choosing Nibiru!",
-        "No problem! Thank you for choosing to fly with Nibiru!",
-        "It's my pleasure to help. Have a great day!"
-      ]
+
     },
     {
       "tag": "pricing",
-      "responses": [
-        "Our pricing is competitive and transparent. You can find all the details on our Pricing page."
-      ]
+
     },
     {
       "tag": "goodbye",
-      "responses": [
-        "Goodbye!",
-        "See You Later!",
-        "It was a pleasure to meet you.",
-        "It was great to chat with you. See you next time!"
-      ]
+
     },
     {
       "tag": "environment",
-      "responses": [
-        "We are proud to be a carbon negative company. Our rockets are reusable, and we donate millions of dollars to environmentally-conscious non-profit organizations each year",
-        "We're committed to reducing our carbon footprint and contributing to a sustainable future for our planet.",
-        "We believe it's important to protect our environment, and we're constantly looking for ways to minimize our impact and give back to the planet."
-      ]
+
     },
     {
       "tag": "booking",
-      "responses": [
-        "You can book a flight right here, on our website. Visit the Pricing page to book a flight. You must book flights a week in advance.",
-        "You can easily book your flight on our website. You must book a week in advance."
-      ]
+
     },
     {
       "tag": "training",
-      "responses": [
-        "Training is included in the price of the flight. You will be trained by professionals, and this training will ensure your preparation and safety for the flight."
-      ]
+
     },
     {
       "tag": "refunds",
-      "responses": [
-        "Refunds are possible if you cancel your booking within 24 hours of purchase. Please contact our customer support to request a refund.",
-        "If you cancel your booking within 24 hours of purchase, you will receive a full refund. Contact our customer support team to initiate a refund.",
-        "Our refund policy allows for full refunds for cancellations made within 24 hours of purchase. If you are eligible for a refund, please contact our customer support team.",
-        "We offer refunds for cancellations made within 24 hours of purchase. Please contact our customer support team for more information on the refund process."
-      ]
+
     },
     {
       "tag": "contact",
-      "responses": [
-        "You can contact us via. our contact form on our website. We will get back to you as soon as possible.",
-        "You can contact us from our contact page. We will get back to you as soon as possible."
-      ]
+
     },
     {
       "tag": "creation",
-      "responses": [
-        "I was created by lucasrpatten, a talented developer at Nibiru. I was created with python3, tensorflow, keras, and nltk. I am being served on the front end through tensorflow.js"
-      ]
+
     },
     {
       "tag": "discounts",
-      "responses": [
-        "We offer a 75% price deal for first responders, teachers, and military. If you believe you are eligible for a discount, please contact us via. our contact form."
-      ]
+
     },
     {
       "tag": "legal",
-      "responses": [
-        "You can contact us about legal matters via. our contact form."
-      ]
+
     },
     {
       "tag": "love",
-      "responses": [
-        "I am an AI, and do not have any feelings.",
-        "I am simply an AI, and do not have the ability to feel attraction."
-      ]
+
     },
     {
       "tag": "how_you",
-      "responses": [
-        "I'm doing great! I'm working right now ¯\\_(ツ)_/¯. How can I assist you?"
-      ]
+
+    },
+    {
+      "tag": "vehicles",
+
+    },
+    {
+      "tag": "offensive",
+
+    },
+    {
+      "tag": "recovery",
+
+    },
+    {
+      "tag": "launch",
+
+    },
+    {
+      "tag": "suicide",
+
     }
   ]
 }
