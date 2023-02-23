@@ -1,187 +1,101 @@
 import json
 import random
+
+import nltk
 import numpy as np
 import tensorflow as tf
 import tensorflowjs as tfjs
-import tensorflow_text as text
-from keras.preprocessing.text import Tokenizer
-from sklearn.model_selection import train_test_split
-from datetime import datetime
+from nltk.corpus import stopwords, wordnet
+from nltk.stem import WordNetLemmatizer, PorterStemmer
+from nltk.tokenize import word_tokenize
+from contractions import fix
 
+# Download required NLTK data
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('stopwords')
 
-def load_data():
-    with open('intents.json') as f:
-        data = json.load(f)
+# Load the data file
+with open('trainingdata.json') as file:
+    data = json.load(file)
 
-    input_data = []
-    labels = []
-    tags = []
-    label_encoder = {}
+# Create lists for training data
+words = []
+tags = []
+docs = []
 
-    for intent in data['intents']:
-        for pattern in intent['patterns']:
-            input_data.append(pattern)
-            label = intent['tag']
-            tags.append(label)
-            if label not in label_encoder:
-                label_encoder[label] = len(label_encoder)
-            labels.append(label_encoder[label])
+# Loop through each sentence in the data file
+for intent in data['intents']:
+    for pattern in intent['patterns']:
+        # Tokenize the words in the pattern
+        words_list = word_tokenize(fix(pattern))
 
-    num_labels = len(set(labels))  # Get the number of unique labels
+        # Remove stop words and punctuation
+        words_list = [word.lower() for word in words_list if word.lower()
+                      not in stopwords.words('english') and word.isalpha()]
 
-    return input_data, labels, tags, label_encoder, num_labels
+        # Lemmatize the words
+        words_list = [WordNetLemmatizer().lemmatize(word) for word in words_list]
 
+        # Stem the words
+        stemmed_words_list = [PorterStemmer().stem(word) for word in words_list]
 
-def split_data(input_data, labels, test_size=0.1, random_state=42):
-    unique_labels = np.unique(labels)
-    train_indices = []
-    test_indices = []
-    for label in unique_labels:
-        idx = np.where(labels == label)[0]
-        np.random.seed(random_state)
-        np.random.shuffle(idx)
-        test_idx = idx[:1] # take one sample for test
-        train_idx = idx[1:] # rest for train
-        test_indices.extend(test_idx)
-        train_indices.extend(train_idx)
-    X_train = [input_data[i] for i in train_indices]
-    X_test = [input_data[i] for i in test_indices]
-    y_train = [labels[i] for i in train_indices]
-    y_test = [labels[i] for i in test_indices]
-    return X_train, X_test, y_train, y_test
+        # Add words to the words list
+        words.extend(words_list)
+        words.extend(stemmed_words_list)
 
+        # Add the pattern and tag to the docs list
+        docs.append((words_list, intent['tag']))
 
+        # Add the tag to the tags list
+        if intent['tag'] not in tags:
+            tags.append(intent['tag'])
 
-def convert_to_sequences(X_train, X_test, embeddings_index):
-    tokenizer = Tokenizer()
-    tokenizer.fit_on_texts(X_train)
-    X_train = tokenizer.texts_to_sequences(X_train)
-    X_test = tokenizer.texts_to_sequences(X_test)
+# Sort the lists and remove duplicates
+words = sorted(list(set(words)))
+tags = sorted(list(set(tags)))
 
-    word_index = tokenizer.word_index
-    embedding_matrix = prepare_embedding_matrix(len(word_index) + 1, 100, embeddings_index, word_index)
+# Create training data
+training_data = []
+output_empty = [0] * len(tags)
+for doc in docs:
+    # Create bag of words for each pattern
+    bag = [int(word in doc[0]) for word in words]
 
-    X_train = tf.keras.preprocessing.sequence.pad_sequences(X_train, padding='post', maxlen=20)
-    X_test = tf.keras.preprocessing.sequence.pad_sequences(X_test, padding='post', maxlen=20)
+    # Create output row for each tag
+    output_row = list(output_empty)
+    output_row[tags.index(doc[1])] = 1
 
-    return X_train, X_test, embedding_matrix
+    # Add the bag and output row to the training data
+    training_data.append([bag, output_row])
 
+# Shuffle the training data
+random.shuffle(training_data)
 
-def load_embeddings():
-    embeddings_index = {}
-    with open('./glove_embeddings/glove.6B.200d.txt') as file:
-        for line in file:
-            word, coefs = line.split(maxsplit=1)
-            coefs = np.fromstring(coefs, 'f', sep=' ')
-            embeddings_index[word] = coefs
-    return embeddings_index
+# Split the training data into input and output
+X = np.array([i[0] for i in training_data])
+y = np.array([i[1] for i in training_data])
 
+# Create the model
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(16, input_shape=(len(X[0]),), activation='relu'),
+    tf.keras.layers.Dense(8, activation='relu'),
+    tf.keras.layers.Dense(len(y[0]), activation='softmax')
+])
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-def prepare_embedding_matrix(VOCAB_SIZE, embedding_dim, embeddings_index, word_index):
-    embedding_matrix = np.zeros((VOCAB_SIZE, embedding_dim))
-    for word, i in word_index.items():
-        if i < VOCAB_SIZE:
-            embedding_vector = embeddings_index.get(word)
-            if embedding_vector is not None:
-                embedding_matrix[i] = embedding_vector
-    return embedding_matrix
+# Train the model
+model.fit(X, y, epochs=100, batch_size=8, verbose=1)
 
+# Save the model
+tfjs.converters.save_keras_model(model, 'chatbot_model_js')
+with open('tags.json', 'w') as file:
+    json.dump(tags, file)
+with open('vocab.json', 'w') as file:
+    json.dump(words, file)
 
-def define_model(VOCAB_SIZE, max_len, embedding_dim, embedding_matrix, num_labels):
-    model = tf.keras.Sequential([
-        tf.keras.layers.Embedding(VOCAB_SIZE, embedding_dim, input_length=max_len,
-                                  weights=[embedding_matrix], trainable=False),
-        tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64)),
-        tf.keras.layers.Dense(64, activation='relu'),
-        tf.keras.layers.Dropout(0.5),
-        tf.keras.layers.Dense(num_labels, activation='softmax')
-    ])
-    return model
+# Save the model
+model.save('chatbot_model.h5')
 
-
-def train_model(model, X_train, y_train, X_test, y_test, EPOCHS=100, BATCH_SIZE=4):
-    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-
-    log_dir = f"./logs/fit/EPOCHS={EPOCHS}&BATCHSIZE={BATCH_SIZE}/" + datetime.now().strftime("%Y%m%d-%H%M%S")
-    tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
-
-    history = model.fit(X_train, tf.keras.utils.to_categorical(y_train), epochs=EPOCHS, batch_size=BATCH_SIZE,
-                        validation_data=(X_test, tf.keras.utils.to_categorical(y_test)),
-                        callbacks=[tensorboard_callback])
-
-    return history
-
-
-def save_model(model, vocab, tags, model_name="chatbot"):
-    # Save the vocabulary
-    config = vocab.get_config()
-    with open('./vocab_config.json', 'w') as f:
-        json.dump(config, f)
-    with open('tags.json', 'w') as file:
-        json.dump(list(set(tags)), file)
-
-    # Save the model
-    model.save(f'{model_name}.h5')
-
-    # Save the model in TensorFlow.js format
-    tfjs.converters.save_keras_model(model, f'{model_name}_js')
-
-def main():
-    # Load and split data
-    input_data, labels, tags, label_encoder, num_labels = load_data()
-    x_train, x_test, y_train, y_test = split_data(input_data, labels)
-
-    # Load embeddings
-    embeddings_index = load_embeddings()
-
-    # Convert data to sequences and prepare embedding matrix
-    x_train, x_test, embedding_matrix = convert_to_sequences(x_train, x_test, embeddings_index)
-
-    # Define and compile model
-    VOCAB_SIZE = len(embedding_matrix)
-    max_len = x_train.shape[1]
-    EMBEDDING_DIMENSIONS = 200
-    model = define_model(VOCAB_SIZE, max_len, EMBEDDING_DIMENSIONS, embedding_matrix, num_labels)
-    train_model(model, x_train, y_train, x_test, y_test)
-
-    # Save model and vocabulary
-    vocab = Tokenizer()
-    vocab.fit_on_texts(input_data)
-    save_model(model, vocab, tags)
-
-if __name__ == '__main__':
-    main()
-
-# log = []
-# with open("logs/training_combinations.txt", "w") as f:
-#     for i in range(10, 151, 10):
-#         start_time = datetime.now()
-#         for j in range(3, 8):
-#             history = prepare_model(epochs=i, batch_size=j)
-#             log.append({"epochs": i, "batch_size": j, "time": (datetime.now() - start_time).total_seconds(),
-#                        "accuracy": history.history['accuracy'], "val_accuracy": history.history['val_accuracy']})
-#             json.dump(log, f)
-
-# view = input("Would you like to view the graphs in matplotlib? (y/n): ")
-# if view.lower() in ["y", "yes"]:
-#     # Create a 2x1 subplot layout
-#     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 8))
-
-#     # Plot the training and validation loss over the epochs in the first subplot
-#     ax1.plot(history.history['loss'], label='Training Loss')
-#     ax1.plot(history.history['val_loss'], label='Validation Loss')
-#     ax1.set_title('Model Loss')
-#     ax1.set_xlabel('Epoch')
-#     ax1.set_ylabel('Loss')
-#     ax1.legend()
-
-#     # Plot the training and validation accuracy over the epochs in the second subplot
-#     ax2.plot(history.history['accuracy'], label='Training Accuracy')
-#     ax2.plot(history.history['val_accuracy'], label='Validation Accuracy')
-#     ax2.set_title('Model Accuracy')
-#     ax2.set_xlabel('Epoch')
-#     ax2.set_ylabel('Accuracy')
-#     ax2.legend()
-
-#     # Show the plot
-#     plt.show()
+# Convert the model to Tensorflow.js format
+tfjs.converters.save_keras_model(model, 'chatbot_model_js')
