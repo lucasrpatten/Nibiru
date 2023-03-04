@@ -102,25 +102,30 @@ def define_model(VOCAB_SIZE, max_len, embedding_dim, embedding_matrix, num_label
     model = tf.keras.Sequential([
         tf.keras.layers.Embedding(VOCAB_SIZE, embedding_dim, input_length=max_len,
                                   weights=[embedding_matrix], trainable=False),
+        tf.keras.layers.Conv1D(filters=32, kernel_size=3, activation='relu', padding='same'),
+        tf.keras.layers.MaxPooling1D(pool_size=2),
+        tf.keras.layers.Dense(128, activation='relu'),
         tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64)),
-        tf.keras.layers.Dense(64, activation='relu'),
-        tf.keras.layers.Dropout(0.5),
+        # tf.keras.layers.Dropout(0.3),
         tf.keras.layers.Dense(num_labels, activation='softmax')
     ])
     return model
 
 
-def train_model(model, x_train, y_train, x_test, y_test, EPOCHS=100, BATCH_SIZE=4):
+def train_model(model, x_train, y_train, x_test, y_test, EPOCHS=40, BATCH_SIZE=3):
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
     log_dir = f"./logs/fit/EPOCHS={EPOCHS}&BATCHSIZE={BATCH_SIZE}/" + datetime.now().strftime("%Y%m%d-%H%M%S")
     tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
+    early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=15)
+
     history = model.fit(x_train, tf.keras.utils.to_categorical(y_train), epochs=EPOCHS, batch_size=BATCH_SIZE,
                         validation_data=(x_test, tf.keras.utils.to_categorical(y_test)),
-                        callbacks=[tensorboard_callback])
+                        callbacks=[tensorboard_callback, early_stop])
 
     return history
+
 
 
 def save_model(model, vocab, tags, model_name="chatbot"):
