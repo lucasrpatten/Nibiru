@@ -21,7 +21,8 @@
         "Hiya",
         "Hey stranger",
         "Greetings",
-        "salutations"
+        "salutations",
+        "Howdy partner"
       ],
       "responses": [
         "Hello! How can I assist you?",
@@ -63,7 +64,8 @@
         "am i gonna die",
         "what are the odds i die on your flight",
         "how can you ensure i am ready to go to space",
-        "do your rockets ever break"
+        "do your rockets ever break",
+        "how many of your rockets have every blown up"
       ],
       "responses": [
         "Our spacecraft was designed by professionals with safety in mind, and no one has been seriously injured on any of our over 30,000 flights. For more information about safety, visit our Safety page.",
@@ -90,7 +92,11 @@
         "kill yourself",
         "Screw you",
         "what is wrong with you you stupid bot",
-        "what is your issue"
+        "what is your issue",
+        "frick you",
+        "I hope you die a slow painful death",
+        "you're an ass",
+        "I hate nibiru so much"
       ],
       "responses": [
         "I apologize if I did something wrong. To submit a complaint, please contact us."
@@ -106,7 +112,9 @@
         "thanks for all the help",
         "I really appreciate all you've done to help me",
         "i appreciate it",
-        "That is extremely helpful, and I am glad you're here to help"
+        "That is extremely helpful, and I am glad you're here to help",
+        "you're so chill I love you",
+        "you're a pretty cool guy"
       ],
       "responses": [
         "You're welcome! Thanks for choosing Nibiru!",
@@ -131,7 +139,8 @@
         "can anyone afford a trip",
         "can I book a trip for 500 dollars",
         "how much money will it take for my family of 5 to go to space?",
-        "can i afford to purchase seats for my friends"
+        "can i afford to purchase seats for my friends",
+        "what will i cost me to take my whole family up to space for a week"
       ],
       "responses": [
         "Our pricing is competitive and transparent. You can find all the details on our Pricing page."
@@ -149,7 +158,8 @@
         "buh bye",
         "bye bye",
         "cya",
-        "adios amigo"
+        "adios amigo",
+        "cya later alligator"
       ],
       "responses": [
         "Goodbye!",
@@ -177,7 +187,10 @@
         "What pollution standards do you follow",
         "does the flight cause pollution",
         "you're killing our planet",
-        "do your rockets kill animals"
+        "do your rockets kill animals",
+        "you are killing the earth",
+        "the pandas are dying because of you",
+        "you're the reasons rhinos are going extinct"
       ],
       "responses": [
         "We are proud to be a carbon negative company. Our spacecraft are reusable and fuel-free, and we donate millions of dollars to environmentally-conscious non-profit organizations each year",
@@ -200,7 +213,9 @@
         "booking",
         "what days can I book for",
         "how do i make a reservation",
-        "What types of flights do you offer"
+        "What types of flights do you offer",
+        "do you offer day trip plans",
+        "i wanna go to space"
       ],
       "responses": [
         "You can book a flight right here, on our website. Visit the Pricing page to book a flight. You must book flights a week in advance. Our Pricing plage includes available flight options.",
@@ -299,7 +314,9 @@
         "how were you made, and by whom",
         "who's your daddy",
         "were you made using tensorflow or python",
-        "who are you"
+        "who are you",
+        "do you use tensorflow",
+        "who's your daddy"
       ],
       "responses": [
         "I am the Nibiru FAQ chatbot. I was created by lucasrpatten, a talented developer at Nibiru. I was created with python3, tensorflow, keras, and nltk. I am being served on the front end through tensorflow.js"
@@ -335,7 +352,9 @@
         "I'm gonna put you in jail",
         "I'm gonna sue you're company because you committed a crime",
         "You're company is committing fraud and other illegal crimes, and I'm gonna get you for it",
-        "you are an evil company that commits many crimes"
+        "you are an evil company that commits many crimes",
+        "I'm gonna sue you guys",
+        "I have good lawyers"
       ],
       "responses": [
         "You can contact us about legal matters via. our contact form."
@@ -362,7 +381,14 @@
         "are you gay",
         "i want to get married",
         "i love you bae",
-        "When are we getting married? I want to have a wedding already"
+        "When are we getting married? I want to have a wedding already",
+        "babe i think i'm in love",
+        "please marry me",
+        "we should have sex",
+        "kiss me",
+        "I have a robot fetish",
+        "bae",
+        "sex me"
       ],
       "responses": [
         "I am an AI, and do not have any feelings.",
@@ -384,10 +410,13 @@
         "hey whats up",
         "wassup",
         "whats going on my bro",
-        "whats up my man. I love you"
+        "whats up my man. I love you",
+        "What's up bro",
+        "wassup",
+        "how's life going"
       ],
       "responses": [
-        "I'm doing great! I'm working right now ¯\\_(ツ)_/¯. How can I assist you?"
+        "I'm doing great! I'm working right now \u00af\\_(\u30c4)_/\u00af. How can I assist you?"
       ]
     },
     {
@@ -417,7 +446,11 @@
         "You're a lil bitch",
         "i hate asians",
         "gay people are the literal worst",
-        "why are you so retarded"
+        "why are you so retarded",
+        "I think all jews deserve to die",
+        "I think all humans deserve to die",
+        "I hate niggas",
+        "hitler was right"
       ],
       "responses": [
         "There is no need to be like that.",
@@ -444,7 +477,8 @@
         "Where do the rockets take off from",
         "how do your spacecraft take off",
         "How do your rockets take off",
-        "what type of launch mechanism do your rockets and spacecraft use"
+        "what type of launch mechanism do your rockets and spacecraft use",
+        "how many g forces are there on take off"
       ],
       "responses": [
         "To launch our spacecraft, the spacecraft can be attached to one of our magnetic tracks at our airport. This 2 mile track accelerates the spacecraft to over 2000MPH! The spacecraft will then take off like a plane, using its momentum to fly to the upper layers of our atmosphere. It can then use it's electrical, environmentally friendly engines to continue to gain altitude, until it reaches space."
@@ -463,10 +497,27 @@
         "i hate myself please let me die",
         "i hope i die on your flight",
         "I hope your flights kill me",
-        "give me a reason to live"
+        "give me a reason to live",
+        "i hate myself",
+        "kill me",
+        "honestly I hate myself with every part of my soul"
       ],
       "responses": [
         "If you are thinking about hurting yourself, please get help. You can call the suicide hotline at 988"
+      ]
+    },
+    {
+      "tag": "opinion",
+      "patterns": [
+        "What is your favorite type of cookie",
+        "What is your favorite color?",
+        "do you prefer cotton candy or ice cream",
+        "iphone or android?",
+        "what is your favorite band",
+        "what are your thoughts on spacex"
+      ],
+      "responses": [
+        "As an AI, I cannot have opinions. I am simply meant for customer questions regarding nibiru."
       ]
     }
   ]
