@@ -77,7 +77,7 @@ def convert_to_sequences(x_train, x_test, embeddings_index):
 
     with open('tokenizer.json', 'w') as f:
         json.dump(tokenizer.to_json(), f)
-    
+
     return x_train, x_test, embedding_matrix
 
 
@@ -118,7 +118,7 @@ def define_model(VOCAB_SIZE, max_len, embedding_dim, embedding_matrix, num_label
 def train_model(model, x_train, y_train, x_test, y_test, epochs=50, batch_size=3):
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    log_dir = f"./logs/fit/EPOCHS={epochs}&BATCHSIZE={batch_size}/" + datetime.now().strftime("%Y%m%d-%H%M%S")
+    log_dir = f"./logs/fit/" + datetime.now().strftime("%Y%m%d-%H%M%S")
     tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
     early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=20)
