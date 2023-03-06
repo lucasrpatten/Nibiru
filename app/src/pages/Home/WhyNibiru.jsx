@@ -2,10 +2,7 @@ import React from "react";
 
 const WhyNibiru = (props) => {
   return (
-    <div className="lg:flex items-center justify-center gap-10 lg:h-[70vh] mt-24">
-      <div className="lg:w-1/2">
-        <img className="rounded-xl" src={props.image} />
-      </div>
+    <div className="lg:flex items-center justify-center gap-10 lg:h-[70vh] my-36">
       <div className="lg:w-1/2 text-white p-5">
         <h1 className="mt-20 lg:mt-0 text-6xl font-bold">WHY NIBIRU?</h1>
         <ul className="list-disc text-2xl m-5">
@@ -26,9 +23,12 @@ const WhyNibiru = (props) => {
         </ul>
         <div className="flex gap-10 mt-10 mb-20 lg:mb-0">
           <button className="rainbow-button">
-            <div className="rainbow-button-inside">Learn More</div>
+            <div className="rainbow-button-inside">Start Today</div>
           </button>
         </div>
+      </div>
+      <div className="lg:w-1/2">
+        <img className="rounded-xl" src={props.image} />
       </div>
     </div>
   );

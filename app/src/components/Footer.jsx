@@ -3,6 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 import fillerImage from "../images/imagefiller.jpg";
+import Discord from "./SocialsLogos/discord-mark-white.png";
+import Instagram from "./SocialsLogos/Instagram_Glyph_White.png";
+import Twitter from "./SocialsLogos/twitter_logo.png";
+import Facebook from "./SocialsLogos/f_logo_RGB-White_58.png";
+import tikTok from "./SocialsLogos/tikTokLogo.png";
 
 const Footer = () => {
   const button =
@@ -22,32 +27,18 @@ const Footer = () => {
               dialectice disputare? Illud dico, ea, quae dicat, praeclare inter
               se cohaerere.{" "}
             </p>
+            <div className="flex gap-8 w-full items-center justify-center">
+              <a href='https://discord.com/' target="_blank" className="hover:cursor-pointer">
+                <img className="max-h-5" src={Discord} />
+              </a>
+              <img className="max-h-5" src={Instagram} />
+              <img className="max-h-5" src={Twitter} />
+              <img className="max-h-5" src={Facebook} />
+              <img className="max-h-5" src={tikTok} />
+            </div>
             <button className={button}>
               <div className={buttonInside}>TSA Documentation</div>
             </button>
-          </div>
-          <div className="mt-20 lg:mt-0 text-2xl text-white lg:w-1/4 h-full flex flex-col items-center justify-center">
-            <div>
-              <h1 className="mb-10">Social Network</h1>
-              <div className="flex flex-col gap-7 w-1/2">
-                <span className="flex gap-10">
-                  <img className="max-h-8 rounded-full" src={fillerImage} />
-                  <a to="/">Discord</a>
-                </span>
-                <span className="flex gap-10">
-                  <img className="max-h-8 rounded-full" src={fillerImage} />
-                  <a to="/">Instagram</a>
-                </span>
-                <span className="flex gap-10">
-                  <img className="max-h-8 rounded-full" src={fillerImage} />
-                  <a to="/">Twitter</a>
-                </span>
-                <span className="flex gap-10">
-                  <img className="max-h-8 rounded-full" src={fillerImage} />
-                  <a to="/">Facebook</a>
-                </span>
-              </div>
-            </div>
           </div>
           <div className="mt-20 lg:mt-0 lg:w-1/4 text-white h-full">
             <h1 className="text-2xl mb-10">Sign Up for Email Updates</h1>
@@ -68,9 +59,8 @@ const Footer = () => {
               and more!
             </p>
           </div>
-        </div>
-        <div className="text-center lg:text-left mt-24 text-white lg:flex justify-around items-center pt-5">
-          <div className="mt-5 lg:mt-0 md:flex gap-5 text-white lg:w-1/2 h-full justify-around">
+          <div className="text-white lg:w-1/4 h-full hidden lg:text-left mt-24 text-white lg:flex justify-around pt-5">
+          <div className="mt-5 lg:mt-0 md:flex gap-5 text-white justify-around">
             <Link className="hover:text-light-gray duration-200" to="/">
               Home
             </Link>
@@ -101,7 +91,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-10 mt-10 text-light-gray bg-dark-blue p-5">
+        </div>
+        <div className="rounded-lg flex items-center justify-center gap-10 mt-10 text-light-gray bg-dark-blue p-5">
           <p>© 2023 NIBIRU, Inc. </p>
         </div>
       </div>
