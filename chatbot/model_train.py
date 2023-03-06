@@ -4,7 +4,6 @@ import nltk
 import numpy as np
 import tensorflow as tf
 import tensorflowjs as tfjs
-import tensorflow_text as text
 from keras.preprocessing.text import Tokenizer
 from sklearn.model_selection import train_test_split
 from datetime import datetime
@@ -121,7 +120,7 @@ def train_model(model, x_train, y_train, x_test, y_test, epochs=50, batch_size=3
     log_dir = f"./logs/fit/" + datetime.now().strftime("%Y%m%d-%H%M%S")
     tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
-    early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=20)
+    early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=15)
 
     history = model.fit(x_train, tf.keras.utils.to_categorical(y_train), epochs=epochs, batch_size=batch_size,
                         validation_data=(x_test, tf.keras.utils.to_categorical(y_test)),
