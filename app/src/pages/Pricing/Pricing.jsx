@@ -27,26 +27,34 @@ const Prices = () => {
             price="$1000/person*"
             information={[
               "Flight Duration: 4 hours",
-              "Max-Elevation: 150,000km",
+              "Max-Elevation: 800km",
               "Training Provided",
             ]}
           />
           <PricingPlan
             name="2 Day Trip"
             price="$2500/person*"
-            information={["Flight Duration: 40 hours"]}
+            information={[
+              "Flight Duration: 40 hours",
+              "Max-Elevation: 1,500km",
+              "Training Provided",
+            ]}
             styles="rounded-xl bg-gray mt-10 lg:mt-0 md:mb-10 lg:w-1/4 text-center border-2 border-gray p-10"
           />
 
           <PricingPlan
             name="Week Long Trip"
             price="$15000/person*"
-            information={["Hey"]}
+            information={[
+              "Flight Duration: 170 hours",
+              "Max-Elevation: 3,000km",
+              "Training Provided",
+            ]}
           />
         </div>
-      </div>
-      <div className="text-white mb-4">
+        <div className="text-white lg:ml-28 mb-4 p-5">
         *Veterans and First Responder Discounts Offered
+        </div>
       </div>
     </motion.div>
   );

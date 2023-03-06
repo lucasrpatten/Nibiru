@@ -40,7 +40,7 @@ const ContactInput = () => {
           placeholder=" " 
           required
           />
-          <label class="label" htmlFor="first-name">First Name</label>
+          <label class="label" htmlFor="first-name">First Name*</label>
         </div>
           <div
             id="last-name-form"
@@ -55,7 +55,7 @@ const ContactInput = () => {
               required
             />
             <label class="label" htmlFor="last-name">
-              Last Name
+              Last Name*
             </label>
           </div>
         </div>
@@ -70,15 +70,15 @@ const ContactInput = () => {
             required
           />
           <label class="label" htmlFor="email">
-            Email
+            Email*
           </label>
         </div>
         <div id="support-type-form" className="w-full flex flex-col mt-5">
           <label className="text-white mb-2" htmlFor="supportType">
-            Support Type
+            Support Type*
           </label>
           <select
-            className="w-full rounded-xl h-10 bg-gray text-white border-2 border-white"
+            className="w-full focus:border-teal duration-200 rounded-xl h-10 bg-gray text-white border-2 border-white"
             name="supportType"
             id="supportType"
             value={supportType}
@@ -92,22 +92,23 @@ const ContactInput = () => {
             <option>General Questions</option>
             <option>Complaints</option>
             <option>Other</option>
+
           </select>
         </div>
         <div id="message-form" className="w-full mt-5">
           <label htmlFor="message" className="text-white">
-            Message
+            Message*
           </label>
           <textarea
             onChange={(event) => setMessage(event.target.value)}
             value={message}
-            className="w-full rounded-md h-32 resize-none"
+            className="mt-2 w-full rounded-md h-32 resize-none"
             name="message"
           />
         </div>
-        <button type="button" onClick={handleSubmit}>
-          Submit
-        </button>
+        <button onClick={handleSubmit} className="mt-10 w-full p-1 font-bold rounded-xl bg-gradient-to-r from-teal !to-purple via-blue">
+            <div className="flex items-center uppercase justify-center text-white w-full h-16 rounded-xl hover:bg-gray/100 transition duration-300 bg-gray/0">Submit</div>
+          </button>
       </div>
     </>
   );

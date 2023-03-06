@@ -12,6 +12,9 @@ import EnvironmentFriendly from "./EnvironmentFriendly.tsx";
 import Intro from "./Intro";
 import WhyNibiru from "./WhyNibiru";
 import EarthView from "./earth_from_window.png";
+import SpaceBackground from "./spaceBackground.png";
+import WhyNibiruImage from "./whyNibiru.png";
+import spaceComparison from "./spaceComparison.png";
 
 const Home = () => {
   return (
@@ -24,11 +27,10 @@ const Home = () => {
         <Intro image={EarthView} />
         <CompanyStats />
         <img
-          className="hidden lg:block mt-24 rounded-xl h-[80vh] w-full"
-          src={fillerImage}
+          className="hidden object-cover lg:block mt-24 rounded-xl h-[80vh] w-full"
+          src={SpaceBackground}
         />
-        <Comparable image={fillerImage} />
-        <WhyNibiru image={fillerImage} />
+        <Comparable image={spaceComparison} />
         <EnvironmentFriendly
           // Photoshop these so they all have the same color background (#d7d2cf or #e6e5e5)
           image1={TreeLogo}
@@ -44,6 +46,7 @@ const Home = () => {
           image6={RecyclingLogo}
           alt6="recycling-logo"
         />
+        <WhyNibiru image={WhyNibiruImage} />
       </div>
     </motion.div>
   );
