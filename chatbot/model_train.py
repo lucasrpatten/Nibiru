@@ -39,7 +39,7 @@ def load_data():
 
     num_labels = len(set(labels))  # Get the number of unique labels
 
-    return input_data, labels, tags, label_encoder, num_labels
+    return input_data, labels, num_labels, label_encoder
 
 
 def split_data(input_data, labels, test_size=0.1, random_state=42):
@@ -75,6 +75,9 @@ def convert_to_sequences(x_train, x_test, embeddings_index):
     x_train = tf.keras.preprocessing.sequence.pad_sequences(x_train, padding='post', maxlen=20)
     x_test = tf.keras.preprocessing.sequence.pad_sequences(x_test, padding='post', maxlen=20)
 
+    with open('tokenizer.json', 'w') as f:
+        json.dump(tokenizer.to_json(), f)
+    
     return x_train, x_test, embedding_matrix
 
 
@@ -106,21 +109,21 @@ def define_model(VOCAB_SIZE, max_len, embedding_dim, embedding_matrix, num_label
         tf.keras.layers.MaxPooling1D(pool_size=2),
         tf.keras.layers.Dense(128, activation='relu'),
         tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64)),
-        # tf.keras.layers.Dropout(0.3),
+        # tf.keras.layers.Dropout(0.2),
         tf.keras.layers.Dense(num_labels, activation='softmax')
     ])
     return model
 
 
-def train_model(model, x_train, y_train, x_test, y_test, EPOCHS=40, BATCH_SIZE=3):
+def train_model(model, x_train, y_train, x_test, y_test, epochs=50, batch_size=3):
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    log_dir = f"./logs/fit/EPOCHS={EPOCHS}&BATCHSIZE={BATCH_SIZE}/" + datetime.now().strftime("%Y%m%d-%H%M%S")
+    log_dir = f"./logs/fit/EPOCHS={epochs}&BATCHSIZE={batch_size}/" + datetime.now().strftime("%Y%m%d-%H%M%S")
     tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
-    early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=15)
+    early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=20)
 
-    history = model.fit(x_train, tf.keras.utils.to_categorical(y_train), epochs=EPOCHS, batch_size=BATCH_SIZE,
+    history = model.fit(x_train, tf.keras.utils.to_categorical(y_train), epochs=epochs, batch_size=batch_size,
                         validation_data=(x_test, tf.keras.utils.to_categorical(y_test)),
                         callbacks=[tensorboard_callback, early_stop])
 
@@ -134,7 +137,7 @@ def save_model(model, vocab, tags, model_name="chatbot"):
     with open('./vocab_config.json', 'w') as f:
         json.dump(config, f)
     with open('tags.json', 'w') as file:
-        json.dump(list(set(tags)), file)
+        json.dump(tags, file)
 
     # Save the model
     model.save(f'{model_name}.h5')
@@ -144,7 +147,7 @@ def save_model(model, vocab, tags, model_name="chatbot"):
 
 def main():
     # Load and split data
-    input_data, labels, tags, label_encoder, num_labels = load_data()
+    input_data, labels, num_labels, label_encoder = load_data()
     x_train, x_test, y_train, y_test = split_data(input_data, labels)
 
     # Load embeddings
@@ -163,7 +166,7 @@ def main():
     # Save model and vocabulary
     vocab = Tokenizer()
     vocab.fit_on_texts(input_data)
-    save_model(model, vocab, tags)
+    save_model(model, vocab, [k for k in label_encoder])
 
 if __name__ == '__main__':
     main()
