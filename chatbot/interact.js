@@ -10,7 +10,7 @@ const tags = JSON.parse(fs.readFileSync("tags.json", "utf-8"));
 const vocab = JSON.parse(fs.readFileSync("vocab.json", "utf-8"));
 const data = JSON.parse(fs.readFileSync("responsedata.json", "utf-8"));
 
-// Create lemmatizer, stemmer, and tokenizer
+// Create lemmatizer, stemmer, and tokenizerHow would your friends describe you?
 const lemmatizer = new Lemmatizer();
 const stemmer = new PorterStemmer();
 const tokenizer = new WordPunctTokenizer();

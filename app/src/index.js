@@ -11,6 +11,7 @@ import Home from "./pages/Home/Home";
 import Prices from "./pages/Pricing/Pricing.jsx";
 import Help from "./pages/Help/Help.jsx";
 import reportWebVitals from "./reportWebVitals";
+import ChatAI from "./components/ChatAI/ChatAI";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
