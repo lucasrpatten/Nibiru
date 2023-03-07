@@ -10,6 +10,7 @@ import ContactUs from "./pages/Company/ContactUs/ContactUs";
 import Home from "./pages/Home/Home";
 import Prices from "./pages/Pricing/Pricing.jsx";
 import Help from "./pages/Help/Help.jsx";
+import About from"./pages/about.jsx";
 import reportWebVitals from "./reportWebVitals";
 
 const root = createRoot(document.getElementById("root"));
@@ -25,6 +26,7 @@ root.render(
             <Route path="/Prices" element={<Prices />} />
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/Help" element={<Help />} />
+            <Route path="/About" element={<About />} />
             {/* <Route path="/Help" element={<Help />} /> */}
           </Routes>
           <Footer />

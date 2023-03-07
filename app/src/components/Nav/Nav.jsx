@@ -72,7 +72,7 @@ const Nav = () => {
                       <Link
                         onClick={() => setDropdown(true)}
                         className="mt-9 w-full absolute duration-200 hover:text-light-gray text-white"
-                        to="/"
+                        to="/About"
                       >
                         About Us
                       </Link>
@@ -105,8 +105,8 @@ const Nav = () => {
         <div className="w-full flex items-center justify-end lg:hidden p-5">
           <div className="text-white justify-between">
             <Link onClick={() => setMenu(true)} to="/">
-              <div className="flex gap-5 items-center">
-                <img className="h-2/12 w-2/12" src={Nibiru} />
+              <div className="md:hidden flex gap-5 items-center">
+                <img className="h-1/12 w-1/12" src={Nibiru} />
               </div>
             </Link>
           </div>
@@ -135,7 +135,11 @@ const Nav = () => {
                     icon={faX}
                   />
                 </div>
-                <MobileNav />
+                <div
+                onClick={() => setMenu(true)}
+                >
+                  <MobileNav />
+                </div>
               </div>
               <div
                 onClick={() => setMenu(true)}
