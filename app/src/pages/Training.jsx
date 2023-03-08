@@ -5,6 +5,7 @@ import building from "./buidingSpace.png";
 import infographicOne from "./trainingInfographics/infographicOne.png";
 import infographicTwo from "./trainingInfographics/infographicTwo.png";
 import infographicThree from "./trainingInfographics/infographicThree.png";
+import infographicFour from "./trainingInfographics/infographicFour.png";
 
 const Main = (props) => {
   return (
