@@ -18,9 +18,11 @@ const PricingPlan = (props) => {
     >
       <p>{props.name}</p>
       <h3 className="text-3xl">{props.price}</h3>
-      <button className="rainbow-button">
-        <div className="rainbow-button-inside">Choose Plan</div>
-      </button>
+      <Link to="https://www.paypal.com/us/business/accept-payments/checkout">
+        <button className="rainbow-button">
+          <div className="rainbow-button-inside">Choose Plan</div>
+        </button>
+      </Link>
       <ul className="mt-5 leading-loose">
         {props.information.map((text, index) => (
           <li key={`info_${index}`}>{text}</li>
