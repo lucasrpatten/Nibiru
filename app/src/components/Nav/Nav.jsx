@@ -104,11 +104,7 @@ const Nav = () => {
         </div>
         <div className="w-full flex items-center justify-end lg:hidden p-5">
           <div className="text-white justify-between">
-            <Link onClick={() => setMenu(true)} to="/">
-              <div className="md:hidden flex gap-5 items-center">
-                <img className="h-1/12 w-1/12" src={Nibiru} />
-              </div>
-            </Link>
+            <div></div>
           </div>
           <FontAwesomeIcon
             onClick={() => setMenu((s) => !s)}
