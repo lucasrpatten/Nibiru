@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Nibiru/static/css/main.da69d34f.css",
+    "main.css": "/Nibiru/static/css/main.e4e0b721.css",
     "main.js": "/Nibiru/static/js/main.96d62122.js",
     "static/js/787.b13fd688.chunk.js": "/Nibiru/static/js/787.b13fd688.chunk.js",
     "static/media/buidingSpace.png": "/Nibiru/static/media/buidingSpace.a0d441558dd044975b79.png",
@@ -24,12 +24,12 @@
     "static/media/tikTokLogo.png": "/Nibiru/static/media/tikTokLogo.aa01df1cd174b357f9c7.png",
     "static/media/twitter_logo.png": "/Nibiru/static/media/twitter_logo.27cda7bdfce3369a30e8.png",
     "index.html": "/Nibiru/index.html",
-    "main.da69d34f.css.map": "/Nibiru/static/css/main.da69d34f.css.map",
+    "main.e4e0b721.css.map": "/Nibiru/static/css/main.e4e0b721.css.map",
     "main.96d62122.js.map": "/Nibiru/static/js/main.96d62122.js.map",
     "787.b13fd688.chunk.js.map": "/Nibiru/static/js/787.b13fd688.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da69d34f.css",
+    "static/css/main.e4e0b721.css",
     "static/js/main.96d62122.js"
   ]
 }
