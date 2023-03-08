@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const WhyNibiru = (props) => {
   return (
@@ -22,9 +23,11 @@ const WhyNibiru = (props) => {
           </li>
         </ul>
         <div className="flex gap-10 mt-10 mb-20 lg:mb-0">
-          <button className="rainbow-button">
-            <div className="rainbow-button-inside">Start Today</div>
-          </button>
+          <Link to="/Prices">
+            <button className="rainbow-button">
+              <div className="rainbow-button-inside">Start Today</div>
+            </button>
+          </Link>
         </div>
       </div>
       <div className="lg:w-1/2">

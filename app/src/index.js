@@ -12,7 +12,8 @@ import Prices from "./pages/Pricing/Pricing.jsx";
 import Help from "./pages/Help/Help.jsx";
 import About from"./pages/about.jsx";
 import reportWebVitals from "./reportWebVitals";
-import ChatAI from "./components/ChatAI/ChatAI";
+import Tsa from "./pages/Tsa.jsx";
+import Training from "./pages/Training.jsx";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
@@ -28,6 +29,8 @@ root.render(
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/Help" element={<Help />} />
             <Route path="/About" element={<About />} />
+            <Route path="/Tsa" element={<Tsa />} />
+            <Route path="/Training" element={<Training />} />
             {/* <Route path="/Help" element={<Help />} /> */}
           </Routes>
           <Footer />
