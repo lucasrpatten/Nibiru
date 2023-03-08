@@ -22,12 +22,12 @@ const Comparable = (props) => {
         </div>
         <div className="lg:w-1/4">
           <div>
-            <h1 className="text-6xl font-bold">80%</h1>
-            <p className="mt-2">higher rates of success</p>
+            <h1 className="text-6xl font-bold">600%</h1>
+            <p className="mt-2">more eco friendly</p>
           </div>
           <div>
-            <h1 className="mt-10 text-6xl font-bold">50%</h1>
-            <p className="mt-2">Cheaper Prices</p>
+            <h1 className="mt-10 text-6xl font-bold">8</h1>
+            <p className="mt-2">saftey certifications</p>
           </div>
         </div>
       </div>
