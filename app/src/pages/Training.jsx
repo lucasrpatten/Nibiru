@@ -103,7 +103,7 @@ const Training = () => {
     />
     <MainFlipped
        training="Week Long Trip Training"
-       image={infographicTwo}
+       image={infographicFour}
        purpose="To prepare for specialized round-trip experience:"
        delivery="On-site lessons received after digital certification"
        evaluation="Must receive at least a 80% passing mark to proceed to round-trip"
