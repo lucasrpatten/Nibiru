@@ -69,7 +69,7 @@ const Footer = () => {
             <Link className="hover:text-light-gray duration-200" to="/Prices">
               Pricing
             </Link>
-            <Link className="hover:text-light-gray duration-200" to="/">
+            <Link className="hover:text-light-gray duration-200" to="/Training">
               Training
             </Link>
             <div className="text-center">

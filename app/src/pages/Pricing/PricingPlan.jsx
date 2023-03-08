@@ -18,7 +18,7 @@ const PricingPlan = (props) => {
     >
       <p>{props.name}</p>
       <h3 className="text-3xl">{props.price}</h3>
-      <Link to="https://www.paypal.com/us/business/accept-payments/checkout">
+      <Link to="/Registration">
         <button className="rainbow-button">
           <div className="rainbow-button-inside">Choose Plan</div>
         </button>

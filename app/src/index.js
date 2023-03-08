@@ -14,6 +14,7 @@ import About from"./pages/about.jsx";
 import reportWebVitals from "./reportWebVitals";
 import Tsa from "./pages/Tsa.jsx";
 import Training from "./pages/Training.jsx";
+import Registration from "./pages/Registration.jsx";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
@@ -32,6 +33,7 @@ root.render(
             <Route path="/Tsa" element={<Tsa />} />
             <Route path="/Training" element={<Training />} />
             {/* <Route path="/Help" element={<Help />} /> */}
+            <Route path="/Registration" element={<Registration/>}/>
           </Routes>
           <Footer />
         </div>
