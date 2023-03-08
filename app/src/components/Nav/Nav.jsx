@@ -47,7 +47,7 @@ const Nav = () => {
             <Link
               onClick={() => setDropdown(true)}
               className={navButton}
-              to="/"
+              to="/Training"
             >
               Training
             </Link>
@@ -86,7 +86,7 @@ const Nav = () => {
                       <Link
                         onClick={() => setDropdown(true)}
                         className="mt-24 w-full absolute duration-200 hover:text-light-gray text-white"
-                        to=""
+                        to="/Tsa"
                       >
                         TSA Documentation
                       </Link>

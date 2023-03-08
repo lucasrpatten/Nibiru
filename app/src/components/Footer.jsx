@@ -16,7 +16,7 @@ const Footer = () => {
     "py-4 px-10 rounded-full hover:bg-dark-blue/100 transition duration-300 bg-dark-blue/0";
   return (
     <>
-      <div className="pt-20 md:p-10 p-5 bg-gray border-t border-white">
+      <div className="py-20 md:p-10 p-5 bg-gray border-t border-white">
         <div className="mt-10 w-full lg:flex gap-10 justify-center text-center">
           <div className="text-white lg:w-1/4 h-full">
             <h1 className="text-2xl font-bold mb-10">NIBIRU</h1>
@@ -36,14 +36,16 @@ const Footer = () => {
               <img className="max-h-5" src={Facebook} />
               <img className="max-h-5" src={tikTok} />
             </div>
-            <button className={button}>
-              <div className={buttonInside}>TSA Documentation</div>
-            </button>
+            <Link to="/Tsa">
+              <button className={button}>
+                <div className={buttonInside}>TSA Documentation</div>
+              </button>
+            </Link>
           </div>
           <div className="mt-20 lg:mt-0 lg:w-1/4 text-white h-full">
             <h1 className="text-2xl mb-10">Sign Up for Email Updates</h1>
             <form className="flex flex-col" action="/action_page.php">
-              <label htmlFor="fname">Enter your email:</label>
+              <label className="font-bold" htmlFor="fname">Enter your email:</label>
               <input
                 className="py-4 px-10 w-full md:w-auto mt-10 p-1 font-bold rounded-full"
                 type="text"
@@ -76,7 +78,7 @@ const Footer = () => {
               </p>
               <ul className="text-light-gray mt-2">
                 <li className="hover:text-teal duration-200">
-                  <Link to="/">About Us</Link>
+                  <Link to="/About">About Us</Link>
                 </li>
                 <li className="hover:text-teal duration-200">
                   <Link to="/ContactUs">Contact Us</Link>
@@ -85,7 +87,7 @@ const Footer = () => {
                   <Link to="/Help">Help/FAQ</Link>
                 </li>
                 <li className="hover:text-teal duration-200">
-                  <Link to="/">TSA Documentation</Link>
+                  <Link to="/Tsa">TSA Documentation</Link>
                 </li>
               </ul>
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Intro = (props) => {
   return (
@@ -14,12 +15,16 @@ const Intro = (props) => {
           beatior Iuppiter quam Epicurus; Quae contraria sunt his, malane?
         </p>
         <div className="md:flex mt-10 justify-center gap-10 items-center lg:justify-start lg:items-start">
-          <button className="rainbow-button">
-            <div className="rainbow-button-inside">Join Today</div>
-          </button>
-          <button className="rainbow-button">
-            <div className="rainbow-button-inside">Learn More</div>
-          </button>
+          <Link to="/Prices">
+            <button className="rainbow-button">
+              <div className="rainbow-button-inside">Join Today</div>
+            </button>
+          </Link>
+          <Link to="/About">
+            <button className="rainbow-button">
+              <div className="rainbow-button-inside">Learn More</div>
+            </button>
+          </Link>
         </div>
       </div>
       <div className="w-full lg:w-1/2 mt-16 lg:mt-0">
