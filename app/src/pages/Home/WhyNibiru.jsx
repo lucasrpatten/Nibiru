@@ -19,9 +19,9 @@ const WhyNibiru = (props) => {
             Most eco friendly interplanet space travel
           </li>
         </ul>
-        <div className="flex gap-10 mt-10 mb-20 lg:mb-0">
+        <div className="w-full lg:w-1/2 my-16 lg:mt-0">
           <Link to="/Prices">
-            <button className="rainbow-button">
+          <button className="rainbow-button">
               <div className="rainbow-button-inside">Start Today</div>
             </button>
           </Link>
