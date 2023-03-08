@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/Nibiru/static/css/main.e4fcdf49.css",
-    "main.js": "/Nibiru/static/js/main.876d2aae.js",
+    "main.css": "/Nibiru/static/css/main.21c1f0f7.css",
+    "main.js": "/Nibiru/static/js/main.20fdd286.js",
     "static/js/787.b13fd688.chunk.js": "/Nibiru/static/js/787.b13fd688.chunk.js",
+    "static/media/spaceBackground.png": "/Nibiru/static/media/spaceBackground.bfdab78678e15e485c2b.png",
+    "static/media/spaceComparison.png": "/Nibiru/static/media/spaceComparison.55e6a147f0039afe4256.png",
     "static/media/earth_from_window.png": "/Nibiru/static/media/earth_from_window.22b81d12e9b4da27fd7e.png",
+    "static/media/whyNibiru.png": "/Nibiru/static/media/whyNibiru.23933bb61b19876736a8.png",
     "static/media/recycling_logo.png": "/Nibiru/static/media/recycling_logo.14312d1e911bdb7da5ba.png",
     "static/media/leaf_logo.png": "/Nibiru/static/media/leaf_logo.ebb5ae9208d492711ef3.png",
     "static/media/tree_logo.png": "/Nibiru/static/media/tree_logo.7cd71bf59c1c9ab97596.png",
     "static/media/plant_rocket_logo.png": "/Nibiru/static/media/plant_rocket_logo.cdc73d4be6adc15b19e4.png",
     "static/media/earth_leaf_logo.png": "/Nibiru/static/media/earth_leaf_logo.4dfeda33c7f434c7690e.png",
     "static/media/rhino_logo.png": "/Nibiru/static/media/rhino_logo.c4569ff69b9b63bf408f.png",
+    "static/media/Instagram_Glyph_White.png": "/Nibiru/static/media/Instagram_Glyph_White.bb8a77bfaa323012e852.png",
     "static/media/nibiru.png": "/Nibiru/static/media/nibiru.76866b727a5927261b61.png",
+    "static/media/tikTokLogo.png": "/Nibiru/static/media/tikTokLogo.aa01df1cd174b357f9c7.png",
+    "static/media/twitter_logo.png": "/Nibiru/static/media/twitter_logo.27cda7bdfce3369a30e8.png",
     "index.html": "/Nibiru/index.html",
-    "main.e4fcdf49.css.map": "/Nibiru/static/css/main.e4fcdf49.css.map",
-    "main.876d2aae.js.map": "/Nibiru/static/js/main.876d2aae.js.map",
+    "main.21c1f0f7.css.map": "/Nibiru/static/css/main.21c1f0f7.css.map",
+    "main.20fdd286.js.map": "/Nibiru/static/js/main.20fdd286.js.map",
     "787.b13fd688.chunk.js.map": "/Nibiru/static/js/787.b13fd688.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4fcdf49.css",
-    "static/js/main.876d2aae.js"
+    "static/css/main.21c1f0f7.css",
+    "static/js/main.20fdd286.js"
   ]
 }
