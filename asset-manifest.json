@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Nibiru/static/css/main.97f14dfe.css",
-    "main.js": "/Nibiru/static/js/main.e1c07514.js",
+    "main.js": "/Nibiru/static/js/main.682038ae.js",
     "static/js/787.b13fd688.chunk.js": "/Nibiru/static/js/787.b13fd688.chunk.js",
     "static/media/buidingSpace.png": "/Nibiru/static/media/buidingSpace.a0d441558dd044975b79.png",
     "static/media/spaceBackground.png": "/Nibiru/static/media/spaceBackground.bfdab78678e15e485c2b.png",
@@ -27,11 +27,11 @@
     "static/media/twitter_logo.png": "/Nibiru/static/media/twitter_logo.27cda7bdfce3369a30e8.png",
     "index.html": "/Nibiru/index.html",
     "main.97f14dfe.css.map": "/Nibiru/static/css/main.97f14dfe.css.map",
-    "main.e1c07514.js.map": "/Nibiru/static/js/main.e1c07514.js.map",
+    "main.682038ae.js.map": "/Nibiru/static/js/main.682038ae.js.map",
     "787.b13fd688.chunk.js.map": "/Nibiru/static/js/787.b13fd688.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.97f14dfe.css",
-    "static/js/main.e1c07514.js"
+    "static/js/main.682038ae.js"
   ]
 }
