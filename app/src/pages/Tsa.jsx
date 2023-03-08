@@ -10,7 +10,7 @@ const Title = () => {
       <h1 className="lg:text-7xl text-5xl font-bold mb-5">TSA Documentation</h1>
       <div className="bg-gray rounded-xl w-1/2 p-5 flex flex-col gap-5">
         <a className="duration-200 hover:text-teal text-xl text-white" href="https://cdn.discordapp.com/attachments/987561854731714580/1082808673140752494/copyright.jpg" target="_blank"> Copyright Checklist</a>
-        <a className="duration-200 hover:text-teal text-xl text-white" href="" target="_blank"> Plan of Work Log</a>
+        <a className="duration-200 hover:text-teal text-xl text-white" href="https://cdn.discordapp.com/attachments/987561854731714580/1082985521149644920/Website_Planning_-_Google_Sheets.jpg" target="_blank"> Plan of Work Log</a>
       </div>
     </div>
   );
