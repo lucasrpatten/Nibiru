@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/Nibiru/static/css/main.da69d34f.css",
-    "main.js": "/Nibiru/static/js/main.991c185b.js",
+    "main.css": "/Nibiru/static/css/main.97f14dfe.css",
+    "main.js": "/Nibiru/static/js/main.fd68e40b.js",
     "static/js/787.b13fd688.chunk.js": "/Nibiru/static/js/787.b13fd688.chunk.js",
     "static/media/buidingSpace.png": "/Nibiru/static/media/buidingSpace.a0d441558dd044975b79.png",
     "static/media/spaceBackground.png": "/Nibiru/static/media/spaceBackground.bfdab78678e15e485c2b.png",
+    "static/media/bannerMobile.jpg": "/Nibiru/static/media/bannerMobile.be0701ba5ccb2eda449f.jpg",
     "static/media/spaceComparison.png": "/Nibiru/static/media/spaceComparison.55e6a147f0039afe4256.png",
     "static/media/infographicTwo.png": "/Nibiru/static/media/infographicTwo.25dcaeb2eccfd6340da8.png",
     "static/media/infographicThree.png": "/Nibiru/static/media/infographicThree.01bb0ff4023913dcd5ad.png",
@@ -24,12 +25,12 @@
     "static/media/tikTokLogo.png": "/Nibiru/static/media/tikTokLogo.aa01df1cd174b357f9c7.png",
     "static/media/twitter_logo.png": "/Nibiru/static/media/twitter_logo.27cda7bdfce3369a30e8.png",
     "index.html": "/Nibiru/index.html",
-    "main.da69d34f.css.map": "/Nibiru/static/css/main.da69d34f.css.map",
-    "main.991c185b.js.map": "/Nibiru/static/js/main.991c185b.js.map",
+    "main.97f14dfe.css.map": "/Nibiru/static/css/main.97f14dfe.css.map",
+    "main.fd68e40b.js.map": "/Nibiru/static/js/main.fd68e40b.js.map",
     "787.b13fd688.chunk.js.map": "/Nibiru/static/js/787.b13fd688.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da69d34f.css",
-    "static/js/main.991c185b.js"
+    "static/css/main.97f14dfe.css",
+    "static/js/main.fd68e40b.js"
   ]
 }
