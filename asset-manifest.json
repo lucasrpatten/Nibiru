@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/Nibiru/static/css/main.183f7717.css",
-    "main.js": "/Nibiru/static/js/main.77219b9c.js",
+    "main.css": "/Nibiru/static/css/main.dcc8f6f7.css",
+    "main.js": "/Nibiru/static/js/main.4c1fb879.js",
     "static/js/787.b13fd688.chunk.js": "/Nibiru/static/js/787.b13fd688.chunk.js",
     "static/media/buidingSpace.png": "/Nibiru/static/media/buidingSpace.a0d441558dd044975b79.png",
     "static/media/spaceBackground.png": "/Nibiru/static/media/spaceBackground.bfdab78678e15e485c2b.png",
     "static/media/spaceComparison.png": "/Nibiru/static/media/spaceComparison.55e6a147f0039afe4256.png",
     "static/media/infographicTwo.png": "/Nibiru/static/media/infographicTwo.25dcaeb2eccfd6340da8.png",
     "static/media/infographicThree.png": "/Nibiru/static/media/infographicThree.01bb0ff4023913dcd5ad.png",
+    "static/media/infographicFour.png": "/Nibiru/static/media/infographicFour.a3f2f1cd9b019b699124.png",
     "static/media/earth_from_window.png": "/Nibiru/static/media/earth_from_window.22b81d12e9b4da27fd7e.png",
     "static/media/ship.png": "/Nibiru/static/media/ship.719d7ba191ef0395223c.png",
     "static/media/whyNibiru.png": "/Nibiru/static/media/whyNibiru.23933bb61b19876736a8.png",
     "static/media/infographicOne.png": "/Nibiru/static/media/infographicOne.a5fb29d8646380ad7583.png",
     "static/media/recycling_logo.png": "/Nibiru/static/media/recycling_logo.14312d1e911bdb7da5ba.png",
+    "static/media/pageBanner.jpg": "/Nibiru/static/media/pageBanner.bf0893114bf47149b0cf.jpg",
     "static/media/leaf_logo.png": "/Nibiru/static/media/leaf_logo.ebb5ae9208d492711ef3.png",
     "static/media/tree_logo.png": "/Nibiru/static/media/tree_logo.7cd71bf59c1c9ab97596.png",
     "static/media/plant_rocket_logo.png": "/Nibiru/static/media/plant_rocket_logo.cdc73d4be6adc15b19e4.png",
@@ -23,12 +25,12 @@
     "static/media/tikTokLogo.png": "/Nibiru/static/media/tikTokLogo.aa01df1cd174b357f9c7.png",
     "static/media/twitter_logo.png": "/Nibiru/static/media/twitter_logo.27cda7bdfce3369a30e8.png",
     "index.html": "/Nibiru/index.html",
-    "main.183f7717.css.map": "/Nibiru/static/css/main.183f7717.css.map",
-    "main.77219b9c.js.map": "/Nibiru/static/js/main.77219b9c.js.map",
+    "main.dcc8f6f7.css.map": "/Nibiru/static/css/main.dcc8f6f7.css.map",
+    "main.4c1fb879.js.map": "/Nibiru/static/js/main.4c1fb879.js.map",
     "787.b13fd688.chunk.js.map": "/Nibiru/static/js/787.b13fd688.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.183f7717.css",
-    "static/js/main.77219b9c.js"
+    "static/css/main.dcc8f6f7.css",
+    "static/js/main.4c1fb879.js"
   ]
 }
