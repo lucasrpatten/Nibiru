@@ -101,9 +101,8 @@ const ChatAI: React.FunctionComponent = () => {
 
   return (
     <>
-        <div className="w-full flex flex-col items-center justify-center p-10 px-24 bg-gray my-5 rounded-xl relative text-white">
+        <div className="text-dark-blue w-full flex flex-col items-center justify-center p-10 px-24 bg-gray my-5 rounded-xl relative text-white">
           <h2 className="pt-14 pb-8 text-lg text-light-gray text-center italic capitalize"> Our digital assistant is replying... </h2>
-          <div className="text-dark-blue">
             {messages.map((message, index) => (
               <ChatMessage
                 message={message.message}
@@ -111,7 +110,6 @@ const ChatAI: React.FunctionComponent = () => {
                 key={index}
               />
             ))}
-          </div>
         </div>
         <div className="w-full">
           <form className="md:flex items-between justify-between gap-8 w-full mt-10 md:bg-gray rounded-full" onSubmit={messageSent}>
@@ -121,7 +119,7 @@ const ChatAI: React.FunctionComponent = () => {
               placeholder="Enter Message Here"
               onChange={(e) => setMessageInput(e.target.value)}
               value={messageInput}
-              className="mb-5 md:mb-0 w-full md:w-3/4 py-4 px-10 p-1 font-bold rounded-full"
+              className="mb-5 text-dark-blue md:mb-0 w-full md:w-3/4 py-4 px-10 p-1 font-bold rounded-full"
             />
             <div className="w-full md:w-1/6 p-1 font-bold rounded-full bg-gradient-to-r from-teal !to-purple via-blue">
               <input className="py-4 px-10 p-1 uppercase text-white w-full rounded-full hover:bg-gray/100 transition duration-300 bg-gray/0" type="submit" value="Send" />
