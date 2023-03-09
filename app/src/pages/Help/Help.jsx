@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import FAQ from "./Faq";
 import { Link } from "react-router-dom";
+import ChatAI from "./ChatAI/ChatAI";
 
 const Help = () => {
   return (
@@ -21,6 +22,8 @@ const Help = () => {
             <FAQ />
           </div>
         </div>
+        <ChatAI />
+
         {/* <h2 className="text-white text-2xl text-center capitalize"> AI Chatbot </h2> */}
         <div className="flex flex-col mt-24 mb-10 lg:px-96 pb-24 text-white">
             <h2 className="text-2xl text-center capitalize"> Have more questions? </h2>

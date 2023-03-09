@@ -8,12 +8,7 @@ from keras.preprocessing.text import Tokenizer
 from sklearn.model_selection import train_test_split
 from datetime import datetime
 
-
-from nltk.stem import WordNetLemmatizer
-
 def load_data():
-    #install nltk wordnet
-    nltk.download('wordnet')
 
     with open('intents.json') as f:
         data = json.load(f)
@@ -22,13 +17,11 @@ def load_data():
     labels = []
     tags = []
     label_encoder = {}
-    lem = WordNetLemmatizer()
 
     for intent in data['intents']:
         for pattern in intent['patterns']:
             pattern = pattern.lower()  # Convert to lowercase
             words = nltk.word_tokenize(pattern)  # Tokenize the pattern into words
-            words = [lem.lemmatize(word) for word in words]  # Lemmatize the words
             input_data.append(" ".join(words))  # Join the words back into a string
             label = intent['tag']
             tags.append(label)
@@ -72,6 +65,7 @@ def convert_to_sequences(x_train, x_test, embeddings_index):
     embedding_matrix = prepare_embedding_matrix(len(word_index) + 1, 100, embeddings_index, word_index)
 
     x_train = tf.keras.preprocessing.sequence.pad_sequences(x_train, padding='post', maxlen=20)
+    print(x_train, x_train.shape)
     x_test = tf.keras.preprocessing.sequence.pad_sequences(x_test, padding='post', maxlen=20)
 
     with open('tokenizer.json', 'w') as f:
@@ -82,7 +76,7 @@ def convert_to_sequences(x_train, x_test, embeddings_index):
 
 def load_embeddings():
     embeddings_index = {}
-    with open('./glove_embeddings/glove.6B.100d.txt') as file:
+    with open('./glove.6B.100d.txt') as file:
         for line in file:
             word, coefs = line.split(maxsplit=1)
             coefs = np.fromstring(coefs, 'f', sep=' ')
@@ -114,13 +108,13 @@ def define_model(VOCAB_SIZE, max_len, embedding_dim, embedding_matrix, num_label
     return model
 
 
-def train_model(model, x_train, y_train, x_test, y_test, epochs=50, batch_size=3):
+def train_model(model, x_train, y_train, x_test, y_test, epochs=40, batch_size=3):
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
     log_dir = f"./logs/fit/" + datetime.now().strftime("%Y%m%d-%H%M%S")
     tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
-    early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=15)
+    early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=20)
 
     history = model.fit(x_train, tf.keras.utils.to_categorical(y_train), epochs=epochs, batch_size=batch_size,
                         validation_data=(x_test, tf.keras.utils.to_categorical(y_test)),
@@ -132,9 +126,6 @@ def train_model(model, x_train, y_train, x_test, y_test, epochs=50, batch_size=3
 
 def save_model(model, vocab, tags, model_name="chatbot"):
     # Save the vocabulary
-    config = vocab.get_config()
-    with open('./vocab_config.json', 'w') as f:
-        json.dump(config, f)
     with open('tags.json', 'w') as file:
         json.dump(tags, file)
 
