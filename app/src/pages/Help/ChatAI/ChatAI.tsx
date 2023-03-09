@@ -103,13 +103,15 @@ const ChatAI: React.FunctionComponent = () => {
     <>
         <div className="w-full flex flex-col items-center justify-center p-10 px-24 bg-gray my-5 rounded-xl relative text-white">
           <h2 className="pt-14 pb-8 text-lg text-light-gray text-center italic capitalize"> Our digital assistant is replying... </h2>
-          {messages.map((message, index) => (
-            <ChatMessage
-              message={message.message}
-              isBot={message.isBot}
-              key={index}
-            />
-          ))}
+          <div className="text-dark-blue">
+            {messages.map((message, index) => (
+              <ChatMessage
+                message={message.message}
+                isBot={message.isBot}
+                key={index}
+              />
+            ))}
+          </div>
         </div>
         <div className="w-full">
           <form className="md:flex items-between justify-between gap-8 w-full mt-10 md:bg-gray rounded-full" onSubmit={messageSent}>
