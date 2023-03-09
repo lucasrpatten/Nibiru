@@ -22,10 +22,7 @@ const Footer = () => {
             <h1 className="text-2xl font-bold mb-10">NIBIRU</h1>
             <p className="mb-10">
               {" "}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur
-              iustitia laudatur? Rhetorice igitur, inquam, nos mavis quam
-              dialectice disputare? Illud dico, ea, quae dicat, praeclare inter
-              se cohaerere.{" "}
+              Whether you are a thrill-seeker, an adventurer, or a scientist, we have the perfect package to satisfy your curiosity and feed your passion for exploration. With Nibiru, the sky is no longer the limit - let us take you to the stars!{" "}
             </p>
             <div className="flex gap-8 w-full items-center justify-center">
               <a href='https://discord.com/' target="_blank" className="hover:cursor-pointer">
