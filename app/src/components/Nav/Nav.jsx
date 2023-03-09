@@ -20,7 +20,7 @@ const Nav = () => {
   return (
     <div className="fixed z-50 w-full">
       <div className="w-full h-20 bg-dark-blue">
-        <div className="border-b border-white hidden lg:flex items-center justify-center">
+        <div className="hidden lg:flex items-center justify-center">
           <div className="text-white w-1/4 h-full justify-center">
             <Link onClick={() => setDropdown(true)} className="" to="/">
               <div className="flex gap-5 items-center">

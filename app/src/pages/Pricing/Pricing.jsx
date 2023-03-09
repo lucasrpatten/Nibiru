@@ -19,7 +19,7 @@ const Prices = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="p-5 py-36">
+      <div className="px-10 py-36">
         <Title />
         <div className="mt-10 md:mb-0 md:mt-10 lg:flex text-white justify-center gap-5 md:py-10">
           <PricingPlan

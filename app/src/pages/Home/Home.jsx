@@ -23,7 +23,7 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="p-5 lg:px-32 md:p-10 md:px-20">
+      <div className="px-10 py-5 lg:px-32 md:p-10 md:px-20">
         <Intro image={EarthView} />
         <CompanyStats />
         <img

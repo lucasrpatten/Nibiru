@@ -61,8 +61,9 @@ const Training = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      className="px-5"
     >
-      <div className="pt-36">
+      <div className="px-5 pt-36">
 
       </div>
     <h1 className="mb-14 text-center text-white lg:text-7xl text-5xl font-bold">Training Breakdown</h1>

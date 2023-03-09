@@ -17,8 +17,8 @@ const Footer = () => {
   return (
     <>
       <div className="py-20 md:p-10 p-5 bg-gray border-t border-white">
-        <div className="mt-10 w-full lg:flex gap-10 justify-center text-center">
-          <div className="text-white lg:w-1/4 h-full">
+        <div className="px-10 mt-10 w-full lg:flex gap-10 justify-center text-center">
+          <div className="text-white lg:w-1/3 h-full">
             <h1 className="text-2xl font-bold mb-10">NIBIRU</h1>
             <p className="mb-10">
               {" "}
@@ -39,7 +39,7 @@ const Footer = () => {
               </button>
             </Link>
           </div>
-          <div className="mt-20 lg:mt-0 lg:w-1/4 text-white h-full">
+          <div className="mt-20 lg:mt-0 lg:w-1/3 text-white h-full">
             <h1 className="text-2xl mb-10">Sign Up for Email Updates</h1>
             <form className="flex flex-col" action="/action_page.php">
               <label className="font-bold" htmlFor="fname">Enter your email:</label>
@@ -58,7 +58,7 @@ const Footer = () => {
               and more!
             </p>
           </div>
-          <div className="text-white lg:w-1/4 h-full hidden lg:text-left mt-24 text-white lg:flex justify-around pt-5">
+          <div className="text-white lg:w-1/3 h-full hidden lg:text-left mt-24 text-white lg:flex justify-around pt-5">
           <div className="mt-5 lg:mt-0 md:flex gap-5 text-white justify-around">
             <Link className="hover:text-light-gray duration-200" to="/">
               Home

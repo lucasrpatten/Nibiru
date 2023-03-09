@@ -1,6 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
 import FaqBanner from "./FaqBanner";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const FAQ = () => {
   return (

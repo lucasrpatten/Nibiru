@@ -19,7 +19,7 @@ const WhyNibiru = (props) => {
             Most eco friendly interplanet space travel
           </li>
         </ul>
-        <div className="w-full lg:w-1/2 my-16 lg:mt-0">
+        <div className="md:flex mt-5 justify-center gap-10 items-center lg:w-1/2 my-16 lg:mt-0">
           <Link to="/Prices">
           <button className="rainbow-button">
               <div className="rainbow-button-inside">Start Today</div>
@@ -27,7 +27,7 @@ const WhyNibiru = (props) => {
           </Link>
         </div>
       </div>
-      <div className="lg:w-1/2">
+      <div className="md:p-10 lg:w-1/2">
         <img className="rounded-xl" src={props.image} />
       </div>
     </div>

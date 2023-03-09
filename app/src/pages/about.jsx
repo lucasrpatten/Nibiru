@@ -19,16 +19,16 @@ const About = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="p-5 py-36">
+      <div className="px-5 py-36">
         <Title />
-        <div className="lg:px-24 mt-24 lg:flex w-full justify-center gap-10 h-auto">
+        <div className="px-5 lg:px-24 mt-24 lg:flex w-full justify-center gap-10 h-auto">
           <img className="w-full lg:w-1/2 rounded-xl" src={ship}/>
           <div className="w-full lg:w-1/2">
             <h1 className="mt-24 md:mt-0 text-purple text-3xl font-semibold uppercase text-center">Mission</h1>
             <p className="text-white text-lg indent-16 leading-loose mt-5">At Nibiru, our mission is to provide safe, reliable, and unforgettable space travel experiences to our clients. We strive to make space travel accessible to everyone, inspiring a new generation of explorers and advancing the frontiers of human knowledge. Our commitment to innovation, safety, and sustainability drives us to continuously improve our technology, operations, and services, ensuring that every journey with us is an adventure of a lifetime. We are committed to reducing our impact on the environment and promoting sustainable practices in all aspects of our operations. We strive to be responsible stewards of the Earth and space.</p>
           </div>
         </div>
-        <div className="lg:px-24 mt-24 lg:flex w-full justify-center gap-10 h-auto">
+        <div className="px-5 lg:px-24 mt-24 lg:flex w-full justify-center gap-10 h-auto">
           <div className="w-full lg:w-1/2">
             <h1 className="text-purple text-3xl font-semibold uppercase text-center">Values</h1>
             <p className="text-white text-lg indent-16 leading-loose mt-5">At Nibiru, we are guided by a set of core values that define who we are and how we conduct ourselves as a company. These values are:
