@@ -10,9 +10,9 @@ interface MessageProps {
   isBot: boolean;
 }
 const ChatMessage: React.FC<MessageProps> = (props) => {
-  let float_dir = props.isBot ? "float-right" : "float-left";
+  let float_dir = props.isBot ? "float-left" : "float-right";
   return (
-    <div className="mb-10">
+    <div className="mb-10 w-full">
       <div className={float_dir}>
         <div className="w-full flex items-start justify-start gap-10">
           <img className="w-10 h-10 hidden md:block" src={profile}/>
@@ -109,7 +109,7 @@ const ChatAI: React.FunctionComponent = () => {
 
   return (
     <>
-        <div className="w-full flex flex-col items-center justify-center p-10 bg-gray my-5 rounded-xl relative text-white">
+        <div className="md:px-24 w-full flex flex-col items-center justify-center p-10 bg-gray my-5 rounded-xl relative text-white">
           <h2 className="pt-14 pb-8 text-lg text-light-gray text-center italic capitalize"> Our digital assistant is replying... </h2>
             {messages.map((message, index) => (
               <ChatMessage
@@ -118,19 +118,17 @@ const ChatAI: React.FunctionComponent = () => {
                 key={index}
               />
             ))}
-        </div>
-        <div className="w-full">
-          <form className="md:flex items-between justify-between gap-8 w-full mt-10 md:bg-gray rounded-full" onSubmit={messageSent}>
+          <form className="mb-10 w-full focus-within:border-teal md:flex items-between justify-between gap-8 w-full mt-10 md:bg-white rounded-full" onSubmit={messageSent}>
             <input
               required
               type="text"
               placeholder="Enter Message Here"
               onChange={(e) => setMessageInput(e.target.value)}
               value={messageInput}
-              className="mb-5 text-dark-blue md:mb-0 w-full md:w-3/4 py-4 px-10 p-1 font-bold rounded-full"
+              className="focus:outline-none mb-5 bg-white text-dark-blue md:mb-0 w-full md:w-3/4 py-4 px-10 p-1 font-bold rounded-full"
             />
             <div className="w-full md:w-1/6 p-1 font-bold rounded-full bg-gradient-to-r from-teal !to-purple via-blue">
-              <input className="py-4 px-10 p-1 uppercase text-white w-full rounded-full hover:bg-gray/100 transition duration-300 bg-gray/0" type="submit" value="Send" />
+              <input className="hover:cursor-pointer py-4 px-10 p-1 uppercase text-white w-full rounded-full hover:bg-dark-blue/100 transition duration-300 bg-dark-blue/0" type="submit" value="Send" />
             </div>
           </form>
         </div>

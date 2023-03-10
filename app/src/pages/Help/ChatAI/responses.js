@@ -82,7 +82,7 @@ const responses = [
     "To launch our spacecraft, the spacecraft can be attached to one of our magnetic tracks at our airport. This 2 mile track accelerates the spacecraft to over 2000MPH! The spacecraft will then take off like a plane, using its momentum to fly to the upper layers of our atmosphere. It can then use it's electrical, environmentally friendly engines to continue to gain altitude, until it reaches space.",
   ],
   [
-    "If you are thinking about hurting yourself, please get help. You can call the suicide hotline at 988",
+    "If you are thinking about hurting yourself, please get help. You can call the suicide hotline at 988.",
   ],
   [
     "As an AI, I cannot have opinions. I am simply meant for customer questions regarding nibiru.",
