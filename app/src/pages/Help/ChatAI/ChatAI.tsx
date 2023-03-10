@@ -3,7 +3,7 @@ import * as tf from "@tensorflow/tfjs";
 import * as natural from "natural";
 import responses from "./responses.js";
 import token from "./tokenizer";
-import profile from "./chatpfp.png";
+// import profile from "./chatpfp.png";
 
 interface MessageProps {
   message: string;
@@ -15,7 +15,7 @@ const ChatMessage: React.FC<MessageProps> = (props) => {
     <div className="mb-10 w-full">
       <div className={float_dir}>
         <div className="w-full flex items-start justify-start gap-10">
-          <img className="w-10 h-10 hidden md:block" src={profile}/>
+          {/* <img className="w-10 h-10 hidden md:block" src={profile}/> */}
           <div className="flex flex-col justify-end">
           <p className="text-white mb-3">Nibiru Bot:</p>
           <div className="h-full bg-white rounded-xl text-dark-blue p-5">
