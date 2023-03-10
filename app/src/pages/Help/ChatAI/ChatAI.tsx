@@ -3,6 +3,7 @@ import * as tf from "@tensorflow/tfjs";
 import * as natural from "natural";
 import responses from "./responses.js";
 import token from "./tokenizer";
+import profile from "./chatpfp.png";
 
 interface MessageProps {
   message: string;
@@ -13,8 +14,15 @@ const ChatMessage: React.FC<MessageProps> = (props) => {
   return (
     <div className="mb-10">
       <div className={float_dir}>
-        <p className="font-bold">Response: </p>
-        <span>{props.message}</span> <br />
+        <div className="w-full flex items-start justify-start gap-10">
+          <img className="w-10 h-10 hidden md:block" src={profile}/>
+          <div className="flex flex-col justify-end">
+          <p className="text-white mb-3">Nibiru Bot:</p>
+          <div className="h-full bg-white rounded-xl text-dark-blue p-5">
+            {props.message}
+            </div> <br />
+          </div>
+          </div>
       </div>
     </div>
   );
@@ -101,7 +109,7 @@ const ChatAI: React.FunctionComponent = () => {
 
   return (
     <>
-        <div className="w-full flex flex-col items-center justify-center p-10 px-24 bg-gray my-5 rounded-xl relative text-white">
+        <div className="w-full flex flex-col items-center justify-center p-10 bg-gray my-5 rounded-xl relative text-white">
           <h2 className="pt-14 pb-8 text-lg text-light-gray text-center italic capitalize"> Our digital assistant is replying... </h2>
             {messages.map((message, index) => (
               <ChatMessage

@@ -24,7 +24,7 @@ function Jump() {
 
   return (
     <AnimatePresence>
-      <div className="fixed flex right-0 bottom-0 w-full justify-end items-end h-2">
+      <div className="z-50 fixed flex right-0 bottom-0 w-full justify-end items-end h-2">
         {" "}
         {showTopBtn && (
           <motion.div initial={{ y: 500 }} animate={{ opacity: 1, y: 0 }}>

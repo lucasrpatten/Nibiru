@@ -13,7 +13,7 @@ const FAQBanner = (props) => {
             className="mt-5 z-20 rounded-t-lg flex bg-gray text-white font-bold p-5 justify-between items-center"
             onClick={() => setBanner((s) => !s)}
             >
-                <h1> {props.question} </h1>
+                <h1 className="mr-5"> {props.question} </h1>
                 <AnimatePresence>
                     {Banner ? (
                     <motion.div
