@@ -111,7 +111,7 @@ const ChatAI: React.FunctionComponent = () => {
     <>
         <div className="md:p-14 w-full flex flex-col items-center justify-center p-10 bg-gray my-5 rounded-xl relative text-white">
           <h2 className="p-8 text-2xl text-white text-center capitalize"> AI Customer Assistance </h2>
-          <div className="mt-5 w-full flex flex-col overflow-auto h-96 rounded-t-xl bg-dark-blue p-10">
+          <div className="mt-5 w-full flex flex-col overscroll-contain overflow-anchor:auto overflow-auto h-96 rounded-t-xl bg-dark-blue p-10">
             <h2 className="text-lg text-light-gray text-center italic capitalize"> Our digital assistant is ready to assist you... </h2>
               {messages.map((message, index) => (
                 <ChatMessage
