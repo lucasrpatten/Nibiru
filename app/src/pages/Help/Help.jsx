@@ -15,8 +15,7 @@ const Help = () => {
       >
         <div className="px-5 mt-[max(10vw,60px)] lg:flex flex-col items-center justify-center text-white">
           <h1 className="lg:text-7xl text-5xl text-center font-bold">Help Center</h1>
-          <div className="flex flex-col items-center justify-center w-full mb-10 rounded-xl">
-            <h2 className="pt-14 pb-8 text-2xl text-white text-center capitalize"> AI Customer Assistance </h2>
+          <div className="mt-14 flex flex-col items-center justify-center w-full mb-10 rounded-xl">
             <ChatAI />
           </div>
           <h2 className="text-2xl text-center mt-24 mb-10">

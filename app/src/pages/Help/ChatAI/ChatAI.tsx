@@ -109,9 +109,10 @@ const ChatAI: React.FunctionComponent = () => {
 
   return (
     <>
-        <div className="md:px-14 w-full flex flex-col items-center justify-center p-10 bg-gray my-5 rounded-xl relative text-white">
-          <h2 className="pt-14 pb-8 text-lg text-light-gray text-center italic capitalize"> Our digital assistant is replying... </h2>
-            <div className="w-full flex flex-col overflow-auto h-96 rounded-t-xl bg-dark-blue p-10">
+        <div className="md:p-14 w-full flex flex-col items-center justify-center p-10 bg-gray my-5 rounded-xl relative text-white">
+          <h2 className="p-8 text-2xl text-white text-center capitalize"> AI Customer Assistance </h2>
+          <div className="mt-5 w-full flex flex-col overflow-auto h-96 rounded-t-xl bg-dark-blue p-10">
+            <h2 className="text-lg text-light-gray text-center italic capitalize"> Our digital assistant is ready to assist you... </h2>
               {messages.map((message, index) => (
                 <ChatMessage
                   message={message.message}
@@ -120,17 +121,17 @@ const ChatAI: React.FunctionComponent = () => {
                 />
               ))}
             </div>
-          <form className="rounded-b-xl mb-10 w-full focus-within:border-teal md:flex items-between justify-between gap-8 w-full md:bg-white rounded-b-xl" onSubmit={messageSent}>
+          <form className="rounded-b-xl focus-within:border-teal md:flex items-between justify-between gap-8 w-full md:bg-white rounded-b-xl" onSubmit={messageSent}>
             <input
               required
               type="text"
               placeholder="Enter Message Here"
               onChange={(e) => setMessageInput(e.target.value)}
               value={messageInput}
-              className="focus:outline-none mb-5 bg-white text-dark-blue md:mb-0 w-full md:w-3/4 py-4 px-10 p-1 font-bold rounded-full"
+              className="focus:outline-none bg-white text-dark-blue md:mb-0 w-full md:w-3/4 py-4 px-10 p-1 font-bold md:rounded-full"
             />
-            <div className="w-full md:w-1/6 p-1 font-bold rounded-br-xl bg-gradient-to-r from-teal !to-purple via-blue">
-              <input className="hover:cursor-pointer py-4 px-10 p-1 rounded-br-xl uppercase text-white w-full hover:bg-dark-blue/100 transition duration-300 bg-dark-blue/0" type="submit" value="Send" />
+            <div className="w-full md:w-1/6 p-1 font-bold rounded-b-xl md:rounded-br-xl bg-gradient-to-r from-teal !to-purple via-blue">
+              <input className="hover:cursor-pointer py-4 px-10 p-1 rounded-b-xl md:rounded-br-xl text-white w-full hover:bg-dark-blue/100 transition duration-300 bg-dark-blue/0" type="submit" value="Send" />
             </div>
           </form>
         </div>
