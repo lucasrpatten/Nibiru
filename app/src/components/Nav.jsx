@@ -2,16 +2,34 @@ import { faBars, faChevronDown, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import fillerImage from "../../images/imagefiller.jpg";
-import Nibiru from "../../images/nibiru.png";
-import MobileNav from "../MobileNav";
+import Nibiru from "../images/nibiru.png";
+import MobileNav from "./MobileNav";
 
 const Nav = () => {
-  const [Menu, setMenu] = useState(true);
-  const [Dropdown, setDropdown] = useState(true);
+  const [menu, setMenu] = useState(true);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownOpen(false);
+    }
+  };
+
   const button =
     "w-auto p-1 font-bold rounded-full bg-gradient-to-r from-teal via-blue to-purple text-white";
   const buttonInside =
@@ -22,44 +40,44 @@ const Nav = () => {
       <div className="w-full h-20 bg-dark-blue">
         <div className="hidden lg:flex items-center justify-center">
           <div className="text-white w-1/4 h-full justify-center">
-            <Link onClick={() => setDropdown(true)} className="" to="/">
+            <Link onClick={() => setDropdownOpen(true)} className="" to="/">
               <div className="flex gap-5 items-center">
-                <img className="h-1/5 w-1/5 ml-5" src={Nibiru} />
+                <img className="h-1/5 w-1/5 ml-5" src={Nibiru} alt="" />
                 <p className="font-extrabold">NIBIRU</p>
               </div>
             </Link>
           </div>
           <div className="flex gap-10 text-white w-1/2 font-normal h-full justify-center tracking-wide">
             <Link
-              onClick={() => setDropdown(true)}
+              onClick={() => setDropdownOpen(false)}
               className={navButton}
               to="/"
             >
               Home
             </Link>
             <Link
-              onClick={() => setDropdown(true)}
+              onClick={() => setDropdownOpen(false)}
               className={navButton}
               to="/Prices"
             >
               Pricing
             </Link>
             <Link
-              onClick={() => setDropdown(true)}
+              onClick={() => setDropdownOpen(false)}
               className={navButton}
               to="/Training"
             >
               Training
             </Link>
-            <div>
+            <div ref={dropdownRef}>
               <p
-                onClick={() => setDropdown((s) => !s)}
+                onClick={handleDropdownToggle}
                 className="text-teal hover:cursor-pointer hover:text-purple duration-200"
               >
                 Company <FontAwesomeIcon icon={faChevronDown} />{" "}
               </p>
               <AnimatePresence>
-                {!Dropdown ? (
+                {dropdownOpen && (
                   <motion.div
                     key="nav"
                     initial={{ opacity: 0 }}
@@ -70,7 +88,7 @@ const Nav = () => {
                   >
                     <div className="bg-dark-blue">
                       <Link
-                        onClick={() => setDropdown(true)}
+                        onClick={() => setDropdownOpen(false)}
                         className="w-full relative duration-200 hover:text-light-gray text-white"
                         to="/About"
                       >
@@ -78,7 +96,7 @@ const Nav = () => {
                       </Link>
                       <br />
                       <Link
-                        onClick={() => setDropdown(true)}
+                        onClick={() => setDropdownOpen(false)}
                         className="mt-16 w-full relative duration-200 hover:text-light-gray text-white"
                         to="/Help"
                       >
@@ -86,7 +104,7 @@ const Nav = () => {
                       </Link>
                       <br />
                       <Link
-                        onClick={() => setDropdown(true)}
+                        onClick={() => setDropdownOpen(false)}
                         className="mt-24 w-full relative duration-200 hover:text-light-gray text-white"
                         to="/Tsa"
                       >
@@ -94,7 +112,7 @@ const Nav = () => {
                       </Link>
                     </div>
                   </motion.div>
-                ) : null}
+                )}
               </AnimatePresence>
             </div>
           </div>
@@ -116,7 +134,7 @@ const Nav = () => {
         </div>
       </div>
       <AnimatePresence>
-        {!Menu ? (
+        {!menu ? (
           <motion.div
             key="nav"
             initial={{ opacity: 0, x: "-50%" }}

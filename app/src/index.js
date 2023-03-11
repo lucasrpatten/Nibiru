@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Jump from "./components/Jump";
-import Nav from "./components/Nav/Nav";
+import Nav from "./components/Nav";
 import ScrollToTop from "./components/Scroll";
 import "./index.css";
 import ContactUs from "./pages/Company/ContactUs/ContactUs";
