@@ -4,7 +4,7 @@ import ship from "./ship.png";
 import building from "./buidingSpace.png";
 import { Link } from "react-router-dom";
 import Banner from "./pageBanner.jpg";
-import MBanner from "./bannerMobile.jpg"
+import MBanner from "./bannerMobile.jpg";
 
 const Registration = () => {
   return (
@@ -15,8 +15,8 @@ const Registration = () => {
     >
       <div className="">
         <div className="w-full h-full flex flex-col items-center justify-center">
-            <img className="w-full h-full hidden md:block" src={Banner}/>
-            <img className="w-full h-full block md:hidden" src={MBanner}/>
+          <img className="w-full h-full hidden md:block" src={Banner} />
+          <img className="w-full h-full block md:hidden" src={MBanner} />
         </div>
       </div>
     </motion.div>

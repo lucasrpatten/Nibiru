@@ -57,13 +57,13 @@ const Nav = () => {
                 className="text-teal hover:cursor-pointer hover:text-purple duration-200"
               >
                 Company <FontAwesomeIcon icon={faChevronDown} />{" "}
-              </p> 
+              </p>
               <AnimatePresence>
                 {!Dropdown ? (
                   <motion.div
                     key="nav"
-                    initial={{ opacity: 0}}
-                    animate={{ opacity: 1}}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     exit={{ opacity: 0, transition: { duration: "0.35" } }}
                     transition={{ stiffness: "100", duration: "0.25" }}
                     className="z-30 absolute bg-dark-blue p-5 pt-2 h-fit w-fit rounded-lg"
@@ -133,9 +133,7 @@ const Nav = () => {
                     icon={faX}
                   />
                 </div>
-                <div
-                onClick={() => setMenu(true)}
-                >
+                <div onClick={() => setMenu(true)}>
                   <MobileNav />
                 </div>
               </div>

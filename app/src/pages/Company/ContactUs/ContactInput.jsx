@@ -21,35 +21,32 @@ const ContactInput = () => {
     window.location.reload();
   };
 
-  const input = "block rounded-xl px-2.5 pb-1.5 pt-4 w-full text-sm text-white bg-gray border-2 border-white focus:outline-none focus:ring-0 focus:border-teal peer"
-  const nameDiv = "relative w-full lg:w-1/2 flex flex-col mt-5 lg:mt-0"
+  const input =
+    "block rounded-xl px-2.5 pb-1.5 pt-4 w-full text-sm text-white bg-gray border-2 border-white focus:outline-none focus:ring-0 focus:border-teal peer";
+  const nameDiv = "relative w-full lg:w-1/2 flex flex-col mt-5 lg:mt-0";
   return (
     <>
       <div className="bg-gray w-full p-10 rounded-xl">
         <div className="md:flex gap-5">
-        <div 
-        id="first-name-form"
-        class={nameDiv}
-        >
-          <input 
-          type="text" 
-          className={input} 
-          name="first-name"
-          value={firstName}
-          onChange={(event) => setFirstName(event.target.value)}
-          placeholder=" " 
-          required
-          />
-          <label class="label" htmlFor="first-name">First Name*</label>
-        </div>
-          <div
-            id="last-name-form"
-            class={nameDiv}
-          >
+          <div id="first-name-form" class={nameDiv}>
             <input
-              className={input} 
+              type="text"
+              className={input}
+              name="first-name"
+              value={firstName}
+              onChange={(event) => setFirstName(event.target.value)}
+              placeholder=" "
+              required
+            />
+            <label class="label" htmlFor="first-name">
+              First Name*
+            </label>
+          </div>
+          <div id="last-name-form" class={nameDiv}>
+            <input
+              className={input}
               name="last-name"
-              placeholder= " "
+              placeholder=" "
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
               required
@@ -92,7 +89,6 @@ const ContactInput = () => {
             <option>General Questions</option>
             <option>Complaints</option>
             <option>Other</option>
-
           </select>
         </div>
         <div id="message-form" className="w-full mt-5">
@@ -106,9 +102,14 @@ const ContactInput = () => {
             name="message"
           />
         </div>
-        <button onClick={handleSubmit} className="mt-10 w-full p-1 font-bold rounded-xl bg-gradient-to-r from-teal !to-purple via-blue">
-            <div className="flex items-center uppercase justify-center text-white w-full h-16 rounded-xl hover:bg-gray/100 transition duration-300 bg-gray/0">Submit</div>
-          </button>
+        <button
+          onClick={handleSubmit}
+          className="mt-10 w-full p-1 font-bold rounded-xl bg-gradient-to-r from-teal !to-purple via-blue"
+        >
+          <div className="flex items-center uppercase justify-center text-white w-full h-16 rounded-xl hover:bg-gray/100 transition duration-300 bg-gray/0">
+            Submit
+          </div>
+        </button>
       </div>
     </>
   );

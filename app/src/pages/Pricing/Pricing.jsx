@@ -53,7 +53,7 @@ const Prices = () => {
           />
         </div>
         <div className="text-white lg:ml-28 mb-4 p-5">
-        *Veterans and First Responder Discounts Offered
+          *Veterans and First Responder Discounts Offered
         </div>
       </div>
     </motion.div>

@@ -14,7 +14,9 @@ const Help = () => {
         className="p-5 lg:px-32 md:p-10 md:px-18 "
       >
         <div className="px-5 mt-[max(10vw,60px)] lg:flex flex-col items-center justify-center text-white">
-          <h1 className="lg:text-7xl text-5xl text-center font-bold">Help Center</h1>
+          <h1 className="lg:text-7xl text-5xl text-center font-bold">
+            Help Center
+          </h1>
           <div className="mt-14 flex flex-col items-center justify-center w-full mb-10 rounded-xl">
             <ChatAI />
           </div>
@@ -27,12 +29,15 @@ const Help = () => {
         </div>
         {/* <h2 className="text-white text-2xl text-center capitalize"> AI Chatbot </h2> */}
         <div className="px-5 flex flex-col mt-24 mb-10 lg:px-96 pb-24 text-white">
-            <h2 className="text-2xl text-center capitalize"> Have more questions? </h2>
-            <button className="rainbow-button">
-                <Link to="/ContactUs">
-                <div className="rainbow-button-inside">Contact Us Directly</div>
-                </Link>
-            </button>
+          <h2 className="text-2xl text-center capitalize">
+            {" "}
+            Have more questions?{" "}
+          </h2>
+          <button className="rainbow-button">
+            <Link to="/ContactUs">
+              <div className="rainbow-button-inside">Contact Us Directly</div>
+            </Link>
+          </button>
         </div>
       </motion.div>
     </>

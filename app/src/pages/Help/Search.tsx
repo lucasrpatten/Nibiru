@@ -4,8 +4,6 @@ import React, { ChangeEvent, useState } from "react";
 
 // interface Properties {}
 
-
-
 // const CommonQuestions: React.FC = () => {
 //   let common = [];
 //   for (let i = 0; i < 2; i++) {

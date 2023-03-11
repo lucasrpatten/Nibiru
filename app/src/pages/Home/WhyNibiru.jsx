@@ -11,17 +11,18 @@ const WhyNibiru = (props) => {
             Safe space travel
             <br />
             <span className="text-xl font-thin text-light-gray">
-            Whether you are a thrill-seeker, an adventurer, or a scientist, we have the perfect package to satisfy your curiosity and feed your passion for exploration. With Nibiru, the sky is no longer the limit - let us take you to the stars!
+              Whether you are a thrill-seeker, an adventurer, or a scientist, we
+              have the perfect package to satisfy your curiosity and feed your
+              passion for exploration. With Nibiru, the sky is no longer the
+              limit - let us take you to the stars!
             </span>
           </li>
           <li className="mt-2">Out of this world experiences</li>
-          <li className="mt-2">
-            Most eco friendly interplanet space travel
-          </li>
+          <li className="mt-2">Most eco friendly interplanet space travel</li>
         </ul>
         <div className="md:flex mt-5 justify-center gap-10 items-center lg:w-1/2 my-16 lg:mt-0">
           <Link to="/Prices">
-          <button className="rainbow-button">
+            <button className="rainbow-button">
               <div className="rainbow-button-inside">Start Today</div>
             </button>
           </Link>

@@ -5,10 +5,21 @@ const Intro = (props) => {
   return (
     <div className="my-24 lg:flex items-center justify-center gap-10">
       <div className="lg:w-1/2 text-white">
-        <h1 className="text-center md:text-left lg:text-9xl text-8xl font-bold">NIBIRU</h1>
-        <h2 className="text-center md:text-left text-3xl mt-5">Space into the future</h2>
+        <h1 className="text-center md:text-left lg:text-9xl text-8xl font-bold">
+          NIBIRU
+        </h1>
+        <h2 className="text-center md:text-left text-3xl mt-5">
+          Space into the future
+        </h2>
         <p className="text-light-gray text-lg mt-20 font-light">
-        Welcome to Nibiru, the premier commercial space travel agency that offers you the once-in-a-lifetime opportunity to explore the vast expanse of the cosmos. Our state-of-the-art technology and experienced team of astronauts ensure your safety and comfort as you embark on an unforgettable journey into space. From our luxurious space stations orbiting the Earth to the exhilarating experience of visiting the Moon and beyond, Nibiru offers a range of exciting space travel packages tailored to suit your every need.
+          Welcome to Nibiru, the premier commercial space travel agency that
+          offers you the once-in-a-lifetime opportunity to explore the vast
+          expanse of the cosmos. Our state-of-the-art technology and experienced
+          team of astronauts ensure your safety and comfort as you embark on an
+          unforgettable journey into space. From our luxurious space stations
+          orbiting the Earth to the exhilarating experience of visiting the Moon
+          and beyond, Nibiru offers a range of exciting space travel packages
+          tailored to suit your every need.
         </p>
         <div className="md:flex mt-5 justify-center gap-10 items-center">
           <Link to="/Prices">

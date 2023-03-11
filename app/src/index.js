@@ -10,7 +10,7 @@ import ContactUs from "./pages/Company/ContactUs/ContactUs";
 import Home from "./pages/Home/Home";
 import Prices from "./pages/Pricing/Pricing.jsx";
 import Help from "./pages/Help/Help.jsx";
-import About from"./pages/about.jsx";
+import About from "./pages/about.jsx";
 import reportWebVitals from "./reportWebVitals";
 import Tsa from "./pages/Tsa.jsx";
 import Training from "./pages/Training.jsx";
@@ -33,7 +33,7 @@ root.render(
             <Route path="/Tsa" element={<Tsa />} />
             <Route path="/Training" element={<Training />} />
             {/* <Route path="/Help" element={<Help />} /> */}
-            <Route path="/Registration" element={<Registration/>}/>
+            <Route path="/Registration" element={<Registration />} />
           </Routes>
           <Footer />
         </div>

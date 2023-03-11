@@ -1,18 +1,18 @@
 import React from "react";
 
 interface Properties {
-  image1: string
-  alt1: string
-  image2: string
-  alt2: string
-  image3: string
-  alt3: string
-  image4: string
-  alt4: string
-  image5: string
-  alt5: string
-  image6: string
-  alt6: string
+  image1: string;
+  alt1: string;
+  image2: string;
+  alt2: string;
+  image3: string;
+  alt3: string;
+  image4: string;
+  alt4: string;
+  image5: string;
+  alt5: string;
+  image6: string;
+  alt6: string;
 }
 
 const EnvironmentFriendly: React.FC<Properties> = (props: Properties) => {
