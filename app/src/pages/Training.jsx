@@ -26,7 +26,7 @@ const Main = (props) => {
               <p className="mb-4"> <span className="font-bold"> Evaluation procedure: </span> {props.evaluation} </p>
           </div>
         </div>
-      <img className="w-full lg:w-1/3" src={props.image}/>
+      <img className="rounded-xl w-full lg:w-1/3" src={props.image}/>
     </div>
   );
 };
@@ -34,7 +34,7 @@ const Main = (props) => {
 const MainFlipped = (props) => {
   return (
     <div className="gap-10 p-8 mb-24 lg:flex items-center justify-center text-center text-white">
-      <img className="w-full lg:w-1/3" src={props.image}/>
+      <img className="rounded-xl w-full lg:w-1/3" src={props.image}/>
       <div>
         <h2 className="mt-10 text-center text-teal text-2xl"> {props.training} </h2>
           <div className=" flex gap-10 flex-row flex flex-col items-center justify-center">
