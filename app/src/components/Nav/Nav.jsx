@@ -66,26 +66,28 @@ const Nav = () => {
                     animate={{ opacity: 1}}
                     exit={{ opacity: 0, transition: { duration: "0.35" } }}
                     transition={{ stiffness: "100", duration: "0.25" }}
-                    className="z-30 absolute bg-dark-blue p-5 h-40 w-48 rounded-lg"
+                    className="z-30 absolute bg-dark-blue p-5 pt-2 h-fit w-fit rounded-lg"
                   >
                     <div className="bg-dark-blue">
                       <Link
                         onClick={() => setDropdown(true)}
-                        className="mt-9 w-full absolute duration-200 hover:text-light-gray text-white"
+                        className="w-full relative duration-200 hover:text-light-gray text-white"
                         to="/About"
                       >
                         About Us
                       </Link>
+                      <br />
                       <Link
                         onClick={() => setDropdown(true)}
-                        className="mt-16 w-full absolute duration-200 hover:text-light-gray text-white"
+                        className="mt-16 w-full relative duration-200 hover:text-light-gray text-white"
                         to="/Help"
                       >
                         Help Center
                       </Link>
+                      <br />
                       <Link
                         onClick={() => setDropdown(true)}
-                        className="mt-24 w-full absolute duration-200 hover:text-light-gray text-white"
+                        className="mt-24 w-full relative duration-200 hover:text-light-gray text-white"
                         to="/Tsa"
                       >
                         TSA Documentation
