@@ -13,7 +13,7 @@ const FAQ = () => {
         />
         <FaqBanner
           question="Q: How much does it cost to travel to space with your company?"
-          answer="A: The cost of space travel varies depending on the program and the type of flight, but it can range from several thousand to hundres of thousands of dollars per person. However, we offer various payment plans and financing options to make it more accessible to a wider range of customers."
+          answer="A: The cost of space travel varies depending on the program and the type of flight, but it can range from several thousand to hundreds of thousands of dollars per person. However, we offer various payment plans and financing options to make it more accessible to a wider range of customers."
         />
         <FaqBanner
           question="Q: What safety measures are in place for commercial space travel?"

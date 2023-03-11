@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-import fillerImage from "../images/imagefiller.jpg";
 import Discord from "./SocialsLogos/discord-mark-white.png";
 import Instagram from "./SocialsLogos/Instagram_Glyph_White.png";
 import Twitter from "./SocialsLogos/twitter_logo.png";
@@ -35,14 +34,14 @@ const Footer = () => {
               <a
                 href="https://discord.com/"
                 target="_blank"
-                className="hover:cursor-pointer"
+                className="hover:cursor-pointer" rel="noreferrer"
               >
-                <img className="max-h-5" src={Discord} />
+                <img className="max-h-5" src={Discord} alt="discord"/>
               </a>
-              <img className="max-h-5" src={Instagram} />
-              <img className="max-h-5" src={Twitter} />
-              <img className="max-h-5" src={Facebook} />
-              <img className="max-h-5" src={tikTok} />
+              <img className="max-h-5" src={Instagram} alt="instagram"/>
+              <img className="max-h-5" src={Twitter} alt="twitter"/>
+              <img className="max-h-5" src={Facebook} alt="facebook"/>
+              <img className="max-h-5" src={tikTok} alt="tiktok"/>
             </div>
             <Link to="/Tsa">
               <button className={button}>
@@ -67,11 +66,11 @@ const Footer = () => {
               </button>
             </form>
             <p className="mt-5">
-              Sign up with your email to receive newletters, discounts, updates,
+              Sign up with your email to receive newsletters, discounts, updates,
               and more!
             </p>
           </div>
-          <div className="text-white lg:w-1/3 h-full hidden lg:text-left mt-24 text-white lg:flex justify-around pt-5">
+          <div className="lg:w-1/3 h-full hidden lg:text-left mt-24 text-white lg:flex justify-around pt-5">
             <div className="mt-5 lg:mt-0 md:flex gap-5 text-white justify-around">
               <Link className="hover:text-light-gray duration-200" to="/">
                 Home

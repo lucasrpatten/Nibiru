@@ -40,7 +40,7 @@ const Nav = () => {
       <div className="w-full h-20 bg-dark-blue">
         <div className="hidden lg:flex items-center justify-center">
           <div className="text-white w-1/4 h-full justify-center">
-            <Link onClick={() => setDropdownOpen(true)} className="" to="/">
+            <Link className="" to="/">
               <div className="flex gap-5 items-center">
                 <img className="h-1/5 w-1/5 ml-5" src={Nibiru} alt="" />
                 <p className="font-extrabold">NIBIRU</p>

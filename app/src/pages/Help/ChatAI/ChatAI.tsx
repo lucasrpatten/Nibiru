@@ -3,7 +3,6 @@ import * as tf from "@tensorflow/tfjs";
 import * as natural from "natural";
 import responses from "./responses.js";
 import token from "./tokenizer";
-// import profile from "./chatpfp.png";
 
 interface MessageProps {
   message: string;
@@ -15,7 +14,7 @@ const ChatMessage: React.FC<MessageProps> = (props) => {
     : "float-right max-w-[80%] text-right";
   let float_dirBox = props.isBot
     ? "h-full bg-white rounded-xl  text-dark-blue p-3"
-    : "p-3 h-full bg-purple rounded-xl  text-whitep-3";
+    : "p-3 h-full bg-purple rounded-xl  text-white";
   let name = props.isBot ? "Nibiru Bot:" : "You:";
   return (
     <div className={`relative mb-1 w-full items-end gap-10`}>
@@ -130,7 +129,7 @@ const ChatAI: React.FunctionComponent = () => {
           </div>
         </div>
         <form
-          className="rounded-b-xl focus-within:border-teal md:flex items-between justify-between gap-8 w-full md:bg-white rounded-b-xl"
+          className="focus-within:border-teal md:flex items-between justify-between gap-8 w-full md:bg-white rounded-b-xl"
           onSubmit={messageSent}
         >
           <input
