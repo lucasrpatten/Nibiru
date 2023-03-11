@@ -9,6 +9,10 @@ import Twitter from "./SocialsLogos/twitter_logo.png";
 import Facebook from "./SocialsLogos/f_logo_RGB-White_58.png";
 import tikTok from "./SocialsLogos/tikTokLogo.png";
 
+const handleSubmit = (event) => {
+  window.location.reload();
+};
+
 const Footer = () => {
   const button =
     "w-full md:w-auto mt-10 md:m-10 p-1 font-bold rounded-full bg-gradient-to-r from-teal via-blue to-purple";
@@ -49,7 +53,7 @@ const Footer = () => {
                 id="fname"
                 name="fname"
               />
-              <button className={button} type="submit">
+              <button onClick={handleSubmit} className={button} type="submit">
                 <div className={buttonInside}>Subscribe</div>
               </button>
             </form>
