@@ -126,7 +126,7 @@ const Nav = () => {
           >
             <div className="flex">
               <div className="h-screen w-3/4 bg-dark-blue lg:hidden">
-                <div className="flex justify-end items-center text-white p-5">
+                <div className="flex justify-end items-center text-white px-5 pb-5">
                   <FontAwesomeIcon
                     onClick={() => setMenu(true)}
                     className="hover:cursor-pointer"

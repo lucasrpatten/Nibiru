@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function MobileNav() {
   return <>
-  <div className="flex flex-col text-white text-xl p-10 gap-8">
+  <div className="flex flex-col text-white text-xl px-10 gap-8">
     <Link clasName="hover:text-light-gray" to="/">Home</Link>
     <Link clasName="hover:text-light-gray" to="/Prices">Pricing</Link>
     <Link clasName="hover:text-light-gray" to="/Training">Training</Link>

@@ -107,7 +107,7 @@ const ChatAI: React.FunctionComponent = () => {
 
   return (
     <>
-      <div className="md:p-14 w-full flex flex-col items-center justify-center p-10 bg-gray my-5 rounded-xl relative text-white">
+      <div className="border-teal border-2	md:border-none md:p-14 w-full flex flex-col items-center justify-center p-0 bg-gray my-5 rounded-xl relative text-white">
         <h2 className="p-8 text-2xl text-white text-center capitalize">
           {" "}
           AI Customer Assistance{" "}
