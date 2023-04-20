@@ -6,15 +6,15 @@ import Jump from "./components/Jump";
 import Nav from "./components/Nav";
 import ScrollToTop from "./components/Scroll";
 import "./index.css";
-import ContactUs from "./pages/Company/ContactUs/ContactUs";
+import ContactUs from "./pages/ContactUs/ContactUs";
 import Home from "./pages/Home/Home";
 import Prices from "./pages/Pricing/Pricing.jsx";
 import Help from "./pages/Help/Help.jsx";
-import About from "./pages/about.jsx";
+import About from "./pages/About/About.jsx";
 import reportWebVitals from "./reportWebVitals";
-import Tsa from "./pages/Tsa.jsx";
-import Training from "./pages/Training.jsx";
-import Registration from "./pages/Registration.jsx";
+import Tsa from "./pages/Tsa/Tsa";
+import Training from "./pages/Training/Training";
+import Registration from "./pages/Registration/Registration";
 
 const root = createRoot(document.getElementById("root"));
 root.render(

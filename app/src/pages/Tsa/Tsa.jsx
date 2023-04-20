@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ship from "./ship.png";
-import building from "./buidingSpace.png";
+import ship from "../ship.png";
+import building from "../buidingSpace.png";
 import { Link } from "react-router-dom";
 
 const Title = () => {

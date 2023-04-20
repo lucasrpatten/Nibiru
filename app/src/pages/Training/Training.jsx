@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ship from "./ship.png";
-import building from "./buidingSpace.png";
+import ship from "../ship.png";
+import building from "../buidingSpace.png";
 import infographicOne from "./trainingInfographics/infographicOne.png";
 import infographicTwo from "./trainingInfographics/infographicTwo.png";
 import infographicThree from "./trainingInfographics/infographicThree.png";
