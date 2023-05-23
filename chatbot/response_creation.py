@@ -10,5 +10,5 @@ intents = intents['intents']
 
 for i in range(len(intents)):
     response_intents.append(intents[i]["responses"])
-with open('responses.json', 'w') as f:
+with open('responses.json', 'w', encoding="utf-8") as f:
     json.dump(response_intents, f)

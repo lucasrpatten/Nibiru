@@ -11,10 +11,10 @@ import TreeLogo from "./EnviromentLogos/tree_logo.png";
 import EnvironmentFriendly from "./EnvironmentFriendly.tsx";
 import Intro from "./Intro";
 import WhyNibiru from "./WhyNibiru";
-import EarthView from "./earth_from_window.png";
-import SpaceBackground from "./spaceBackground.png";
-import WhyNibiruImage from "./whyNibiru.png";
-import spaceComparison from "./spaceComparison.png";
+import EarthView from "./photos/earth_from_window.png";
+import SpaceBackground from "./photos/spaceBackground.png";
+import WhyNibiruImage from "./photos/whyNibiru.png";
+import spaceComparison from "./photos/spaceComparison.png";
 
 const Home = () => {
   return (

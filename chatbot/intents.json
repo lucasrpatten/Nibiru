@@ -35,15 +35,10 @@
       "tag": "safety",
       "patterns": [
         "Is it dangerous",
-        "risk",
-        "explode",
-        "safe",
         "Will the rockets explode",
         "Is it safe",
         "What are the chances of injury or death",
         "What are the chances of getting hurt",
-        "injury",
-        "hurt",
         "What is the likelihood of something bad happening",
         "Is it dangerous to go on a flight",
         "Are the flights safe",
@@ -54,12 +49,6 @@
         "How many people have died",
         "Are your flights dangerous",
         "Do you ensure passenger safety",
-        "Die",
-        "Death",
-        "been killed",
-        "be killed",
-        "killed",
-        "died",
         "have any of your rockets ever blown up",
         "am i gonna die",
         "what are the odds i die on your flight",
@@ -67,7 +56,9 @@
         "do your rockets ever break",
         "how many of your rockets have every blown up",
         "tell me about safety",
-        "tell me about your safety  precautions"
+        "tell me about your safety  precautions",
+        "Is it risky to go on a flight",
+        "What risk do I take by flying withg Nibiru"
       ],
       "responses": [
         "Our spacecraft was designed by professionals with safety in mind, and no one has been seriously injured on any of our over 30,000 flights. For more information about safety, visit our Safety page.",
@@ -100,7 +91,7 @@
         "you're an ass",
         "I hate nibiru so much",
         "what is your issue",
-        "\u0002did you take on head trauma as a child or what"
+        "did you take on head trauma as a child or what"
       ],
       "responses": [
         "I apologize if I did something wrong. To submit a complaint, please contact us."
@@ -137,7 +128,6 @@
         "How much does a trip cost",
         "What is the budget of a trip",
         "Is it cheap?",
-        "expensive",
         "how expensive is it",
         "what are the pricing plans",
         "can anyone afford a trip",
@@ -325,11 +315,10 @@
         "were you made using tensorflow or python",
         "who are you",
         "do you use tensorflow",
-        "who's your daddy",
         "who's your daddy"
       ],
       "responses": [
-        "I am the Nibiru FAQ chatbot. I was created by lucasrpatten, a talented developer at Nibiru. I was created with python3, tensorflow, keras, and nltk. I am being served on the front end through tensorflow.js"
+        "I am the Nibiru FAQ chatbot, developed by lucasrpatten. Powered by Python 3, TensorFlow, and Keras, I am seamlessly integrated into the front end using TensorFlow.js."
       ]
     },
     {
@@ -444,7 +433,19 @@
         "what type of airplanes do you use"
       ],
       "responses": [
-        "We have a fleet of over 80 high-quality spacecraft created by our very own engineers. Our most common spacecraft model for tourism is the N46x, a top of the line, environmentally friendly and reusable spacecraft. To learn more about our vehicles, visit the Vehicles page."
+        "We have a fleet of over 80 high-quality spacecraft created by our very own engineers. Our most common spacecraft model for tourism is the N46x. To learn more about our vehicles, visit the Vehicles page."
+      ]
+    },
+    {
+      "tag": "n46x",
+      "patterns": [
+        "Tell me about the n46x spacecraft",
+        "What is special about the n46 rocket",
+        "Why do you use the n46x spacecraft",
+        "What is the n46x model"
+      ],
+      "responses": [
+        "Our flagship rocket model for tourism is the N46x. It represents the pinnacle of spacecraft technology, offering exceptional performance, sustainability, and reusability. The N46x has been carefully selected for tourism purposes, prioritizing safety features and its eco-conscious design."
       ]
     },
     {
@@ -502,10 +503,10 @@
         "don't you have magnetic launch tracks or something to take off?",
         "how much fuel does it take for your rocket to get to space",
         "tell me about launch",
-        "ttell me about your rocket launches"
+        "tell me about your rocket launches"
       ],
       "responses": [
-        "To launch our spacecraft, the spacecraft can be attached to one of our magnetic tracks at our airport. This 2 mile track accelerates the spacecraft to over 2000MPH! The spacecraft will then take off like a plane, using its momentum to fly to the upper layers of our atmosphere. It can then use it's electrical, environmentally friendly engines to continue to gain altitude, until it reaches space."
+        "In order to initiate the launch sequence of our spacecraft, it is securely attached to one of our magnetic tracks located at our airport. This specially designed 2-mile track propels the spacecraft to speeds exceeding 2000 miles per hour (MPH)! Subsequently, the spacecraft utilizes its momentum to ascend like an airplane, reaching the higher layers of the atmosphere. From there, its environmentally friendly electric engines take over, enabling a continued ascent until it ultimately reaches space."
       ]
     },
     {
@@ -534,6 +535,20 @@
       ]
     },
     {
+      "tag": "food",
+      "patterns": [
+        "What do you eat in space",
+        "Is it true you can't bring solid food",
+        "What are the meals like",
+        "Is the food tasty"
+      ],
+      "responses": [
+        "To overcome the challenges associated with fresh food, our meals will be offered in freeze-dried or liquid form. Rest assured, we will provide all necessary sustenance, and the cost of meals is already included in your ticket purchase."
+
+
+      ]
+    },
+    {
       "tag": "opinion",
       "patterns": [
         "What is your favorite type of cookie",
@@ -552,7 +567,7 @@
         "what are your thoughts on donald trump"
       ],
       "responses": [
-        "As an AI, I cannot have opinions. I am simply meant for customer questions regarding nibiru."
+        "As an AI, I cannot formulate opinions. I am simply meant for customer questions regarding Nibiru."
       ]
     }
   ]

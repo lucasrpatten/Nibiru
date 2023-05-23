@@ -2,3 +2,5 @@ node_modules
 .vscode
 build
 venv
+.npmrc
+glove.6B.100d.txt
